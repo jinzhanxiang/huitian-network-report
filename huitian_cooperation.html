@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天保体系与汇天网络 一揽子合作汇总方案</title>
+<link rel="stylesheet" href="https://jinzhanxiang.github.io/tianbao-projects/assets/report.css">
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('a[href]');
+  links.forEach(function(link) {
+    const href = link.getAttribute('href');
+    if (href && (href.includes('appendix_') || href.includes('附件'))) {
+      link.className = 'appendix-link';
+    }
+  });
+});
+</script>
+
+<style>
+/* ===== enhance_report: 浮动侧边栏（默认收起）V14.0 重大修复 ===== */
+/* ⚠️ FIX V14.0: 必须用 position:fixed，否则 transform 偏移会依赖文档流造成布局错乱 */
+.toc-sidebar, .key-conclusion{
+  position:fixed !important;top:80px;z-index:90;
+  width:240px;max-height:75vh;overflow-y:auto;
+  padding:14px;border-radius:8px;
+  background:#fff;border:1px solid #e2e8f0;
+  box-shadow:0 4px 16px rgba(0,0,0,0.12);
+  font-size:13px;line-height:1.55;
+  transition:transform 0.3s ease,left 0.3s ease,right 0.3s ease;
+  box-sizing:border-box;
+}
+.toc-sidebar{left:0}
+.key-conclusion{right:0}
+.toc-sidebar:not(.open){transform:translateX(calc(-100% - 20px))}
+.toc-sidebar.open{transform:translateX(10px)}
+.key-conclusion:not(.open){transform:translateX(calc(100% + 20px))}
+.key-conclusion.open{transform:translateX(-10px)}
+.toc-sidebar-toggle, .key-conclusion-toggle{
+  position:fixed;z-index:99;padding:10px 14px;border-radius:8px;
+  cursor:pointer;font-size:13px;font-weight:600;border:none;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  white-space:nowrap;
+}
+.toc-sidebar-toggle{top:120px;left:20px;background:#1a365d;color:#fff}
+.key-conclusion-toggle{top:120px;right:20px;background:linear-gradient(135deg,#fef3c7,#fde68a);border:2px solid #d69e2e;color:#744210}
+/* ⚠️ FIX V15.0: TOC 标题 + 列表完整排版（解决"打开后排版混乱"） */
+.toc-sidebar .toc-title{
+  font-size:14px !important;font-weight:700 !important;
+  color:#1a365d !important;margin:0 0 10px 0 !important;
+  padding-bottom:8px !important;border-bottom:2px solid #1a365d !important;
+  text-align:left !important;line-height:1.4 !important;
+}
+.toc-sidebar .toc-list, .toc-sidebar ul.toc-list{
+  list-style:none !important;margin:0 !important;padding:0 !important;
+  max-height:65vh !important;overflow-y:auto !important;
+}
+.toc-sidebar .toc-list li, .toc-sidebar ul.toc-list > li{
+  margin:0 !important;padding:0 !important;line-height:1.5 !important;
+  border:none !important;
+}
+.toc-sidebar .toc-list a, .toc-sidebar ul.toc-list a{
+  display:block !important;padding:6px 10px !important;
+  color:#1a365d !important;text-decoration:none !important;
+  font-size:13px !important;line-height:1.5 !important;
+  border-radius:4px !important;transition:background 0.15s ease !important;
+  word-break:break-word !important;
+}
+.toc-sidebar .toc-list a:hover, .toc-sidebar ul.toc-list a:hover{
+  background:#f1f5f9 !important;color:#0f172a !important;
+}
+.toc-sidebar .toc-list .toc-h2, .toc-sidebar ul.toc-list > li > a.toc-h2{
+  font-weight:700 !important;font-size:13px !important;
+  color:#1a365d !important;margin-top:6px !important;
+  border-left:3px solid #1a365d !important;
+}
+.toc-sidebar .toc-list .toc-h3, .toc-sidebar ul.toc-list ul > li > a.toc-h3{
+  font-weight:400 !important;font-size:12px !important;
+  color:#475569 !important;padding-left:22px !important;
+  border-left:1px solid #cbd5e1 !important;
+}
+.toc-sidebar .toc-list ul, .toc-sidebar ul.toc-list ul{
+  list-style:none !important;margin:0 !important;padding:0 !important;
+}
+.toc-sidebar::-webkit-scrollbar{width:6px}
+.toc-sidebar::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+.toc-sidebar::-webkit-scrollbar-track{background:#f1f5f9}
+/* Key Conclusion 排版 */
+.key-conclusion .toc-title{
+  font-size:14px !important;font-weight:700 !important;
+  color:#744210 !important;margin:0 0 10px 0 !important;
+  padding-bottom:8px !important;border-bottom:2px solid #d69e2e !important;
+  text-align:left !important;
+}
+.key-conclusion .toc-list, .key-conclusion ul.toc-list{
+  list-style:none !important;margin:0 !important;padding:0 !important;
+}
+.key-conclusion .toc-list li{margin:0 0 8px 0 !important;padding:0 !important;line-height:1.5 !important}
+.key-conclusion .toc-list a{
+  display:block !important;padding:6px 10px !important;
+  color:#744210 !important;text-decoration:none !important;
+  font-size:13px !important;border-radius:4px !important;
+}
+.key-conclusion .toc-list a:hover{background:#fef3c7 !important}
+/* ⚠️ FIX V14.0: 移动端严格按 viewport 计算，不让按钮超出屏外 */
+@media (max-width:768px){
+  .toc-sidebar, .key-conclusion{
+    width:200px !important;max-width:65vw !important;
+    font-size:12px !important;padding:10px !important;
+    top:460px;
+  }
+  .toc-sidebar-toggle, .key-conclusion-toggle{
+    padding:8px 10px !important;font-size:12px !important;
+    top:430px !important;
+  }
+  .toc-sidebar-toggle{left:8px !important}
+  .key-conclusion-toggle{right:8px !important}
+  /* H1 预留顶部空间避免被侧栏按钮遮挡 */
+  body h1{margin-top:80px !important;padding-top:0 !important;font-size:20px !important;line-height:1.3 !important}
+}
+@media (max-width:420px){
+  .toc-sidebar, .key-conclusion{width:160px !important;max-width:55vw !important;font-size:11px !important;top:440px}
+  .toc-sidebar-toggle, .key-conclusion-toggle{top:410px !important}
+  body h1{margin-top:70px !important;font-size:18px !important}
+}
+/* ===== 关键结论 callout ===== */
+.callout-conclusion{background:linear-gradient(135deg,#fffbeb,#fef3c7);
+  border-left:4px solid #d69e2e;padding:18px 22px;margin:24px 0;border-radius:0 8px 8px 0;
+  box-shadow:0 2px 6px rgba(214,158,46,0.1)}
+.callout-conclusion h2, .callout-conclusion h3{
+  color:#744210;border-bottom:2px solid #d69e2e;padding-bottom:8px;margin-top:0}
+.callout-conclusion ul{padding-left:20px}
+
+/* ===== enhance_report: 深色模式切换按钮 ===== */
+.theme-toggle-btn{
+  position:fixed;top:20px;right:20px;z-index:999;
+  width:44px;height:44px;border-radius:50%;
+  border:2px solid #d69e2e;background:#fff;
+  font-size:22px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+  transition:transform 0.2s ease,box-shadow 0.2s ease
+}
+.theme-toggle-btn:hover{transform:scale(1.08);box-shadow:0 4px 12px rgba(0,0,0,0.25)}
+body.dark-mode .theme-toggle-btn{background:#1a202c;border-color:#d69e2e}
+/* ===== 移动端适配 ===== */
+@media (max-width:768px){
+  .theme-toggle-btn{width:38px;height:38px;font-size:18px;top:14px;right:14px}
+}
+/* ⚠️ FIX V14.0+V15.0: 深色模式全局覆盖（背景、文字、表格、链接等 + 防色冲突） */
+body.dark-mode{background:#0f172a !important;color:#e2e8f0 !important}
+/* ⚠️ FIX V15.0: 顸底底色重组中、深淺切换（防止主体叠元色元）主调为 #0f172a 深背景 + #e2e8f0 浅文字 */
+body.dark-mode *:not([class*="hljs"]):not(code):not(pre):not(kbd):not(samp){
+  border-color:#334155 !important
+}
+body.dark-mode *:not(.theme-toggle-btn):not(.toc-sidebar-toggle):not(.key-conclusion-toggle){
+  color:inherit !important
+}
+/* TOC / 关键结論侧栏 */
+body.dark-mode .toc-sidebar, body.dark-mode .key-conclusion{
+  background:#1e293b !important;border-color:#334155 !important;color:#e2e8f0 !important
+}
+body.dark-mode .toc-sidebar .toc-title{color:#f1f5f9 !important;border-bottom-color:#fbbf24 !important}
+body.dark-mode .toc-sidebar .toc-list a, body.dark-mode .key-conclusion a{color:#e2e8f0 !important}
+body.dark-mode .toc-sidebar .toc-list a:hover, body.dark-mode .key-conclusion a:hover{color:#fbbf24 !important}
+body.dark-mode .toc-sidebar .toc-list .toc-h2{color:#93c5fd !important;border-left-color:#93c5fd !important}
+body.dark-mode .toc-sidebar .toc-list .toc-h3{color:#cbd5e1 !important}
+body.dark-mode .toc-sidebar::-webkit-scrollbar-thumb{background:#475569}
+body.dark-mode .toc-sidebar::-webkit-scrollbar-track{background:#0f172a}
+body.dark-mode .key-conclusion .toc-title{color:#fbbf24 !important;border-bottom-color:#fbbf24 !important}
+body.dark-mode .key-conclusion .toc-list a{color:#fef3c7 !important}
+body.dark-mode .key-conclusion .toc-list a:hover{background:#78350f !important}
+/* 表格 */
+body.dark-mode table{background:#1e293b !important;color:#e2e8f0 !important;border-color:#334155 !important}
+body.dark-mode table th{
+  background:#334155 !important;color:#f1f5f9 !important;border-color:#475569 !important
+}
+body.dark-mode table td{border-color:#334155 !important;color:#e2e8f0 !important;background:transparent !important}
+body.dark-mode table tr:nth-child(even) td{background:#0f172a !important}
+body.dark-mode table tr:nth-child(odd) td{background:#1e293b !important}
+body.dark-mode table thead{background:#334155 !important;color:#f1f5f9 !important}
+/* 文字层级 */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6{color:#f1f5f9 !important}
+body.dark-mode p, body.dark-mode li, body.dark-mode dd, body.dark-mode dt, body.dark-mode blockquote, body.dark-mode span, body.dark-mode td, body.dark-mode div{color:#e2e8f0 !important}
+body.dark-mode strong, body.dark-mode b{color:#f1f5f9 !important}
+body.dark-mode em, body.dark-mode i{color:#cbd5e1 !important}
+body.dark-mode hr{border-color:#334155 !important;background:#334155 !important}
+/* 链接 */
+body.dark-mode a:not(.toc-h2):not(.toc-h3):not(.toc-list a){color:#93c5fd !important}
+body.dark-mode a:hover:not(.toc-h2):not(.toc-h3){color:#fbbf24 !important}
+/* Callout */
+body.dark-mode .callout-conclusion{
+  background:linear-gradient(135deg,#451a03,#78350f) !important;
+  border-left-color:#fbbf24 !important;color:#fef3c7 !important
+}
+body.dark-mode .callout-conclusion h2, body.dark-mode .callout-conclusion h3{
+  color:#fbbf24 !important;border-bottom-color:#fbbf24 !important
+}
+body.dark-mode .callout-conclusion p, body.dark-mode .callout-conclusion li, body.dark-mode .callout-conclusion span{
+  color:#fef3c7 !important
+}
+body.dark-mode .callout-h{background:#1e293b !important;border-left-color:#fbbf24 !important;color:#e2e8f0 !important}
+body.dark-mode .callout-h h2, body.dark-mode .callout-h h3, body.dark-mode .callout-h h4{color:#fbbf24 !important}
+body.dark-mode .callout-h p, body.dark-mode .callout-h li, body.dark-mode .callout-h span{color:#e2e8f0 !important}
+body.dark-mode .key-conclusion-toggle{
+  background:linear-gradient(135deg,#451a03,#78350f) !important;color:#fef3c7 !important
+}
+/* 图表 */
+body.dark-mode .chart-figure{background:#1e293b !important;border-color:#334155 !important;color:#e2e8f0 !important}
+body.dark-mode .chart-figure svg{filter:invert(0.85) hue-rotate(180deg)}
+body.dark-mode .chart-figure figcaption, body.dark-mode .chart-figure .chart-title{color:#cbd5e1 !important}
+
+/* ============================================================
+   ⚠️ V13.0 图表文字规范化（与正文 17px 视觉对齐，已固化到执行脚本）
+   --------------------------------------------------------------
+   背景：图表 SVG 默认 viewBox="0 0 100" + 实际宽度 ~720px，
+   旧硬编码 font-size="3" 在 viewBox 单位下会被放大到 21.6px，
+   反而比正文 17px 还大——主公多次反馈「图表字体过大」。
+   规则：图表内所有 SVG text 元素按视觉级别统一到 12~16px。
+   auto_chart.py 同步把所有字号替换为 FS_TITLE/FS_SUB/FS_LABEL/
+   FS_AXIS/FS_TICK/FS_BIG/FS_GAUGE_BIG 常量；此处 CSS 是最终像素兜底。
+   ============================================================ */
+.chart-figure svg text{font-size:13px !important; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif !important}
+/* 新 V13.0 常量映射（auto_chart.py 现在生成的图表） */
+.chart-figure svg text[font-size="1.4"]{font-size:11px !important}
+.chart-figure svg text[font-size="1.7"]{font-size:12px !important}
+.chart-figure svg text[font-size="2.0"]{font-size:13px !important}
+.chart-figure svg text[font-size="2.4"]{font-size:14px !important}
+.chart-figure svg text[font-size="3.0"]{font-size:15px !important}
+.chart-figure svg text[font-size="4.2"]{font-size:17px !important}
+.chart-figure svg text[font-size="6.5"]{font-size:19px !important}
+/* ⚠️ 兼容遗留 V12.0 之前硬编码的字号（保证旧报告重新部署后也被矫正） */
+.chart-figure svg text[font-size="2.5"]{font-size:12px !important}
+.chart-figure svg text[font-size="2.8"]{font-size:12px !important}
+.chart-figure svg text[font-size="3"]{font-size:12px !important}
+.chart-figure svg text[font-size="3.2"]{font-size:13px !important}
+.chart-figure svg text[font-size="3.5"]{font-size:13px !important}
+.chart-figure svg text[font-size="4"]{font-size:14px !important}
+.chart-figure svg text[font-size="4.5"]{font-size:15px !important}
+.chart-figure svg text[font-size="5"]{font-size:17px !important}
+.chart-figure svg text[font-size="6"]{font-size:19px !important}
+.chart-figure svg text[font-size="9"]{font-size:24px !important}
+.chart-figure svg text[font-size="16"]{font-size:30px !important}
+/* 段落个人 inline-style 中的黑色、高亮度文字 （主动顶代）*/
+body.dark-mode [style*="color: rgb(0, 0, 0)"], body.dark-mode [style*="color:#000"], body.dark-mode [style*="color: #000"], body.dark-mode [style*="color:#000000"], body.dark-mode [style*="color: black"]{
+  color:#e2e8f0 !important
+}
+body.dark-mode [style*="color: rgb(255, 255, 255)"], body.dark-mode [style*="color:#fff"], body.dark-mode [style*="color: #fff"], body.dark-mode [style*="color:#ffffff"], body.dark-mode [style*="color: white"]{
+  color:#0f172a !important  /* 深色背景下白色字看不见而变虚背景 */
+}
+body.dark-mode [style*="background: rgb(255, 255, 255)"], body.dark-mode [style*="background:#fff"], body.dark-mode [style*="background: #fff"], body.dark-mode [style*="background:#ffffff"], body.dark-mode [style*="background: white"]{
+  background:#1e293b !important  /* 浅底变深底保持内容可见 */
+}
+body.dark-mode .toc-sidebar-toggle{background:#1e293b !important;color:#fbbf24 !important;border:1px solid #fbbf24}
+body.dark-mode .key-conclusion-toggle{color:#fef3c7 !important}
+/* 重要代码块不反转：原始亮底色语义为主 */
+body.dark-mode code, body.dark-mode pre, body.dark-mode kbd, body.dark-mode samp{
+  background:#0b1424 !important;color:#e2e8f0 !important;border-color:#334155 !important
+}
+body.dark-mode pre code{background:transparent !important}
+body.dark-mode blockquote{background:#1e293b !important;border-left-color:#d69e2e !important;color:#cbd5e1 !important}
+
+
+/* === V15.1 ASCII 块转专属图表 === */
+.ascii-figure{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  margin:14px 0;padding:12px;
+  background:#f7fafc;border:1px solid #e2e8f0;border-radius:6px;
+  font-size:14px;
+}
+.ascii-figure-title{
+  font-size:14px;font-weight:700;color:#1a365d;
+  margin-bottom:10px;padding-bottom:6px;
+  border-bottom:1px dashed #cbd5e0;
+}
+.ascii-treemap-bar{
+  display:flex;width:100%;height:54px;
+  border-radius:4px;overflow:hidden;
+  border:1px solid #cbd5e0;
+}
+.ascii-treemap-cell{
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  padding:6px 4px;color:#fff;
+  font-weight:600;text-align:center;
+  border-right:1px solid rgba(255,255,255,0.4);
+  box-sizing:border-box;
+}
+.ascii-treemap-cell:last-child{border-right:none}
+.ascii-treemap-pct{font-size:14px;font-weight:700;line-height:1.2}
+.ascii-treemap-name{font-size:12px;line-height:1.2;margin-top:2px}
+.ascii-bars-list{display:flex;flex-direction:column;gap:8px}
+.ascii-bar-row{
+  display:flex;align-items:center;gap:12px;
+  font-size:13px;color:#2d3748;
+}
+.ascii-bar-label{flex:0 0 320px;line-height:1.4;overflow:hidden;text-overflow:ellipsis}
+.ascii-bar-track{flex:1;height:16px;background:#edf2f7;border-radius:3px;overflow:hidden;border:1px solid #cbd5e0}
+.ascii-bar-fill{height:100%;border-radius:2px;transition:width 0.3s}
+.ascii-tree-list{display:flex;flex-direction:column;gap:4px}
+.ascii-tree-row{padding:4px 0 4px 8px;line-height:1.5;font-size:13px}
+.ascii-tree-l0{font-weight:700;color:#1a365d}
+/* ⚠️ FIX V15.1.7: ASCII 图表深色模式覆盖（主公 2026-07-12 20:07 反馈"控股路径表格深色下字体看不清"） */
+body.dark-mode .ascii-figure{
+  background:#1e293b !important;border-color:#334155 !important;color:#e2e8f0 !important
+}
+body.dark-mode .ascii-figure-title{
+  color:#fbbf24 !important;border-bottom-color:#475569 !important
+}
+body.dark-mode .ascii-bar-row{color:#e2e8f0 !important}
+body.dark-mode .ascii-bar-label{color:#e2e8f0 !important}
+body.dark-mode .ascii-bar-track{background:#334155 !important;border-color:#475569 !important}
+body.dark-mode .ascii-tree-row{color:#e2e8f0 !important}
+body.dark-mode .ascii-tree-l0{color:#fbbf24 !important}
+body.dark-mode .ascii-treemap-bar{border-color:#475569 !important}
+.ascii-tree-l1{font-weight:500;color:#2c5282}
+.ascii-tree-l2{color:#4a5568}
+
+</style></head>
+<body><button id="dark-mode-toggle" class="theme-toggle-btn" title="切换深色模式" aria-label="切换深色模式">🌙</button>
+<div class="nav"><a href="index.html">📊 汇天报告目录</a></div>
+<div class="toc-sidebar"><div class="toc-title">📑 章节导航（共 16 节）</div>
+<ul class="toc-list">
+<li><a href="#auto-h-1-60de84" class="toc-h2">第一篇 汇天机构间 REITs 34% 投资价值分析（纯市场化视角）</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-101-946159" class="toc-h3">1.1 分析框架与数据总览</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-102-ec5a91" class="toc-h3">1.2 纵轴一：资产端质量</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-103-e2bfca" class="toc-h3">1.3 纵轴二：产品端——机构间 REITs 条款的定价含义</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-104-89af59" class="toc-h3">1.4 纵轴三：治理端——34% 份额的控制力与回报</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-105-8d4cc7" class="toc-h3">1.5 横轴一：同业对标</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-106-db62e2" class="toc-h3">1.6 横轴二：情景压力——IRR 三情景</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-107-234b5e" class="toc-h3">1.7 横轴三：替代选择——机会成本</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-108-17d0c0" class="toc-h3">1.8 纵横交汇：估值区间与投资价值结论</a>
+</ul>
+<li><a href="#auto-h-2-dfc012" class="toc-h2">第二篇 一揽子合作框架</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-109-33c772" class="toc-h3">2.1 战略协同必要性</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-110-e08f15" class="toc-h3">2.2 总体方案设计</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-111-5df150" class="toc-h3">2.3 关键命题拆解</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-112-7e39b3" class="toc-h3">2.4 34% 投资主体选择：天保基建 vs 天保控股</a>
+</ul>
+<li><a href="#auto-h-3-32e161" class="toc-h2">第三篇 五个专项的核心作用</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-113-68f7a6" class="toc-h3">3.1 专项一：天保基建（10亿减值化解 + REITs 认购）-相见报告01-天保基建专项-减值处理与业务转型</a>
+</ul>
+</ul>
+</div>
+
+<div class="key-conclusion">
+<h3 class="callout-h">🎯 关键结论</h3>
+<p>核心观点详见正文各章节分析。</p>
+</div>
+<h1>天保体系与汇天网络 一揽子合作汇总方案</h1>
+<p><strong>报告版本</strong>：V1 · 五大主体协同
+<strong>分析日期</strong>：2026-07-14
+<strong>核心命题</strong>：以  34% 投资价值研究为基础，纯市场化&quot;风险收益一般&quot;——需要叠加一揽子合作框架（基建减值处理 + 能源转型 + GPU租赁 + 综合金融），由天保控股体系协调，助力汇天解决 34% REITs 资金来源 + 国企信用增信 + 估值提升，同时反向解决天保体系内部的天保基建减值和天保能源转型问题
+<strong>方法论</strong>：纵横分析法（hv-analysis）· 五大主体协同</p>
+<hr />
+<div class="callout-conclusion">
+<h2 id="auto-h-1-60de84">第一篇 汇天机构间 REITs 34% 投资价值分析（纯市场化视角）</h2>
+<blockquote>
+<p>以下分析全部基于纯市场化结论。不涉及任何合作机构的一揽子协同框架，仅从资产质量、产品结构、治理机制、同业对标、情景压力和替代选择六个维度，独立判断 34% REITs 份额的投资价值。-详见00-纵横分析-纯市场投资价值研究</p>
+</blockquote>
+<h3 id="auto-h-101-946159">1.1 分析框架与数据总览</h3>
+<p>本报告采用<strong>纵横分析法（hv-analysis）</strong>：纵轴穿透三层（资产端/产品端/治理端），横轴三维对标（同业对标/情景压力/替代选择）。纵横交汇点 = 估值区间 + 投资价值判断。</p>
+<div class="ascii-figure ascii-treemap"><div class="ascii-figure-title">📊 控股 / 持股 / 比例分布（自动 Treemap）</div><div class="ascii-treemap-bar"><div class="ascii-treemap-cell" style="width:2.69%;background:#1a365d;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">8.3%</div><div class="ascii-treemap-name" style="color:#fff">- Cap Rate = 8.27%</div></div><div class="ascii-treemap-cell" style="width:20.49%;background:#2c5282;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">63.0%</div><div class="ascii-treemap-name" style="color:#fff">- 上架率 = 63.00%，FY2021→FY2026E 累计下降 36.3pp</div></div><div class="ascii-treemap-cell" style="width:31.98%;background:#d69e2e;color:#1a202c"><div class="ascii-treemap-pct" style="color:#1a202c">98.3%</div><div class="ascii-treemap-name" style="color:#1a202c">- 前五大客户收入占比 = 98.34%，其中京东 42.59% + 华为 25.90% = 68.49%</div></div><div class="ascii-treemap-cell" style="width:25.82%;background:#2f855a;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">79.4%</div><div class="ascii-treemap-name" style="color:#fff">- 79.4% 收入在 2026 年 3-6 月集中到期</div></div><div class="ascii-treemap-cell" style="width:2.76%;background:#718096;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">8.5%</div><div class="ascii-treemap-name" style="color:#fff">- 合理溢价上限 = 8.5%，谈判可接受上限 = 10-12%</div></div><div class="ascii-treemap-cell" style="width:11.06%;background:#c53030;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">34.0%</div><div class="ascii-treemap-name" style="color:#fff">- 34% 投入 = 14.76-16.23 亿</div></div><div class="ascii-treemap-cell" style="width:3.25%;background:#1a365d;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">10.0%</div><div class="ascii-treemap-name" style="color:#fff">- 基准 IRR= 5.00%，悲观 IRR = 3.94%，乐观 IRR = 5.8-6.5%</div></div><div class="ascii-treemap-cell" style="width:1.95%;background:#2c5282;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">6.0%</div><div class="ascii-treemap-name" style="color:#fff">- 机会成本：不如公募 REITs，优于国债</div></div></div></div>
+<p><strong>纯市场化总判断</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>结论</th>
+<th style="text-align:center">对估值的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>资产端</td>
+<td>区位稀缺（4 网一级节点组合，不可复制不可迁移）但运营指标弱（上架率 63%、单柜功率 4.4 kW、客户高度集中）</td>
+<td style="text-align:center">中性偏负</td>
+</tr>
+<tr>
+<td>产品端</td>
+<td>机构间 REITs 的流动性折价天然压制 IRR 至 5% 左右（相对公募 REITs 低 1-2pp）</td>
+<td style="text-align:center">负向</td>
+</tr>
+<tr>
+<td>治理端</td>
+<td>34% → 并表是治理升级路径（A+C+D 联动），非估值提升路径；IRR 是核心决策变量</td>
+<td style="text-align:center">中性</td>
+</tr>
+<tr>
+<td>同业对标</td>
+<td>Cap Rate 8.27% 合理，但上架率修复是估值提升唯一抓手</td>
+<td style="text-align:center">中性</td>
+</tr>
+<tr>
+<td>情景压力</td>
+<td>溢价超 19% 则悲观 IRR 跌破国债（硬约束）；基准 IRR 5.00% 略低于 WACC 5.5%</td>
+<td style="text-align:center">上限约束</td>
+</tr>
+<tr>
+<td>替代选择</td>
+<td>公募 REITs 在流动性和收益两个维度均优于机构间 REITs</td>
+<td style="text-align:center">机会成本偏高</td>
+</tr>
+<tr>
+<td><strong>综合</strong></td>
+<td><strong>纯市场化：风险收益一般——安全边际存在但超额收益不足</strong></td>
+<td style="text-align:center">—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="auto-h-102-ec5a91">1.2 纵轴一：资产端质量</h3>
+<h4>1.2.1 入池资产基本参数与历史经营</h4>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入池资产</td>
+<td>东八栋数据中心，IT 容量 74,600 kW / 17,789 柜</td>
+<td>项目汇报 v7 §1</td>
+</tr>
+<tr>
+<td>地理位置</td>
+<td>北京通州宋庄</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>评估机构</td>
+<td>戴德梁行土地房地产评估有限公司</td>
+<td>同上</td>
+</tr>
+<tr>
+<td><strong>资产评估值（NAV）</strong></td>
+<td><strong>42.02 亿元</strong>（折合 56,327 元/kW）</td>
+<td>同上</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th style="text-align:center">营业收入(万元)</th>
+<th style="text-align:center">EBITDA(万元)</th>
+<th style="text-align:center">上架率</th>
+<th style="text-align:center">签约率</th>
+<th style="text-align:center">收缴率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023A</td>
+<td style="text-align:center">109,168.45</td>
+<td style="text-align:center">62,388.76</td>
+<td style="text-align:center">89.35%</td>
+<td style="text-align:center">99.30%</td>
+<td style="text-align:center">100%</td>
+</tr>
+<tr>
+<td>2024A</td>
+<td style="text-align:center">105,050.62</td>
+<td style="text-align:center">60,897.66</td>
+<td style="text-align:center">84.94%</td>
+<td style="text-align:center">99.09%</td>
+<td style="text-align:center">100%</td>
+</tr>
+<tr>
+<td>2025A</td>
+<td style="text-align:center">90,986.27</td>
+<td style="text-align:center">53,443.66</td>
+<td style="text-align:center">79.73%</td>
+<td style="text-align:center">94.70%</td>
+<td style="text-align:center">100%</td>
+</tr>
+<tr>
+<td>2026E</td>
+<td style="text-align:center">70,406.97</td>
+<td style="text-align:center">35,993.37</td>
+<td style="text-align:center">63.00%</td>
+<td style="text-align:center">94.70%</td>
+<td style="text-align:center">100%</td>
+</tr>
+</tbody>
+</table>
+<p>上架率下滑加速：FY2023→FY2024 -4.41pp → FY2024→FY2025 -5.21pp → FY2025→FY2026E <strong>-16.73pp</strong>（历年最大单年降幅）。收入弹性约 1.20（上架率每降 1pp，收入降 1.20%），说明流失客户（京东）单柜收入高于存量客户。</p>
+<h4>1.2.2 签约率-上架率异常差（31.70pp）</h4>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th style="text-align:center">上架率</th>
+<th style="text-align:center">签约率</th>
+<th style="text-align:center">差</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023A</td>
+<td style="text-align:center">89.35%</td>
+<td style="text-align:center">99.30%</td>
+<td style="text-align:center">9.95pp</td>
+<td>正常</td>
+</tr>
+<tr>
+<td>2024A</td>
+<td style="text-align:center">84.94%</td>
+<td style="text-align:center">99.09%</td>
+<td style="text-align:center">14.15pp</td>
+<td>正常</td>
+</tr>
+<tr>
+<td>2025A</td>
+<td style="text-align:center">79.73%</td>
+<td style="text-align:center">94.70%</td>
+<td style="text-align:center">14.97pp</td>
+<td>偏高</td>
+</tr>
+<tr>
+<td><strong>2026E</strong></td>
+<td style="text-align:center"><strong>63.00%</strong></td>
+<td style="text-align:center"><strong>94.70%</strong></td>
+<td style="text-align:center"><strong>31.70pp</strong></td>
+<td>🔴 异常</td>
+</tr>
+</tbody>
+</table>
+<p>行业参考：运营稳定的成熟数据中心「已约未上」比通常维持 5-15pp。成熟资产超过 20pp 需关注客户是否实质上已退出但合同未终止。汇天东八栋为运营多年的存量资产，31.70pp 无法用「新园区爬坡期」解释。同业中润泽科技差约 1-5pp、数据港差约 5pp、世纪互联差约 15-20pp、万国数据差约 18pp（含爬坡）——汇天 31.70pp 处于同业最高水平。</p>
+<p><strong>对估值的硬约束</strong>：如果差中约 16pp 来自京东虚签（已实际撤出），「有效签约率」实际仅约 78-80%。上架率恢复天花板不是 94.70%，而是约 78-80%——安全边际仅 10-12pp。</p>
+<h4>1.2.3 客户集中度与集中到期风险</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>客户</th>
+<th style="text-align:center">收入占比</th>
+<th>合同到期</th>
+<th style="text-align:center">续约状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>京东（联通北京）</td>
+<td style="text-align:center">42.59%</td>
+<td>2026.03</td>
+<td style="text-align:center">续签中</td>
+</tr>
+<tr>
+<td>2</td>
+<td>华为（联通北京）</td>
+<td style="text-align:center">25.90%</td>
+<td>2026.05</td>
+<td style="text-align:center">续签中</td>
+</tr>
+<tr>
+<td>3</td>
+<td>中信银行</td>
+<td style="text-align:center">10.94%</td>
+<td>2026.06</td>
+<td style="text-align:center">未提及</td>
+</tr>
+<tr>
+<td>4-5</td>
+<td>其他</td>
+<td style="text-align:center">18.90%</td>
+<td>2028.03</td>
+<td style="text-align:center">—</td>
+</tr>
+</tbody>
+</table>
+<p>前五大客户占比 98.34%，远超国际同业（Equinix &lt;25%、Digital Realty &lt;30%）和国内同业（润泽 REIT &lt;50%、万国 REIT &lt;40%）。已租部分的 84% 在 2026 年到期，79.4% 收入在 2026 年 3-6 月集中到期——续约不确定性是最大的短期风险。</p>
+<h4>1.2.4 网络优势：防御性底盘而非增长性引擎</h4>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align:center">可复制性</th>
+<th style="text-align:center">可迁移性</th>
+<th>关键卡点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>物理层（机房/电力/带宽）</td>
+<td style="text-align:center">🟢 可复制</td>
+<td style="text-align:center">🔴 不可迁移</td>
+<td>资本开支可解决</td>
+</tr>
+<tr>
+<td>一级节点资质</td>
+<td style="text-align:center">🔴 几乎不可能</td>
+<td style="text-align:center">🔴 不可迁移</td>
+<td>国家规划，非市场化购买</td>
+</tr>
+<tr>
+<td>CGWNET 授权</td>
+<td style="text-align:center">🔴 极难</td>
+<td style="text-align:center">🔴 不可迁移</td>
+<td>国家安全审批</td>
+</tr>
+<tr>
+<td>大客户粘性</td>
+<td style="text-align:center">🟡 12-24 个月</td>
+<td style="text-align:center">🔴 数月迁移期</td>
+<td>搬迁成本 + 业务中断</td>
+</tr>
+<tr>
+<td><strong>综合结论</strong></td>
+<td style="text-align:center"><strong>几乎不可能</strong></td>
+<td style="text-align:center"><strong>不可迁移</strong></td>
+<td>物理层可复制，资质层不可复制</td>
+</tr>
+</tbody>
+</table>
+<p>网络优势的估值定位——<strong>防御性底盘（+0~5% 方向性正面影响），非增长性引擎</strong>。原因：</p>
+<ul>
+<li>约束① 受益者有限：真正为低时延付溢价的金融客户 ≤50 家/2,000-3,000 柜，仅占 17,789 总柜的 11-17%</li>
+<li>约束② 大厂自建不可逆：京东/阿里/腾讯/字节均自建，大厂（68% 收入）核心关切是规模可扩展性+电力成本，非低时延差异化</li>
+<li>约束③ 物理瓶颈：单柜功率 4.4 kW vs AI 训练需求 20-40 kW/柜，网络再好也上不了架</li>
+<li>约束④ 已有竞对同样接入三大运营商：万国/世纪互联/光环新网北京多节点均同时接入</li>
+</ul>
+<h4>1.2.5 Cap Rate 交叉验证</h4>
+<p>戴德梁行 Cap Rate 8.27% 相对公募 IDC REITs（润泽 ~7.1%、万国 ~5.9%）高出 117-237bp。交叉验证表明 117bp 的上浮在方向上是合理的：</p>
+<div class="ascii-figure ascii-treemap"><div class="ascii-figure-title">📊 控股 / 持股 / 比例分布（自动 Treemap）</div><div class="ascii-treemap-bar"><div class="ascii-treemap-cell" style="width:44.37%;background:#1a365d;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">63.0%</div><div class="ascii-treemap-name" style="color:#fff">上架率 63% vs 公募 95-99% → 有效运营杠杆低，Cap Rate 应显著上浮</div></div><div class="ascii-treemap-cell" style="width:55.63%;background:#2c5282;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">79.0%</div><div class="ascii-treemap-name" style="color:#fff">客户 79% 2026 年到期 vs 公募分散度高 → 集中到期风险，Cap Rate 应小幅上浮</div></div></div></div>
+<p>汇天 NAV 隐含分派率 6.95%（= 可供分配 29,192 万 / NAV 420,200 万）vs 公募 IPO 分派率 5.07-6.38%，差额 57-188bp 已反映汇天特定风险。Cap Rate 8.27% 处于合理保守区间。</p>
+<p><strong>资产端小结</strong>：NAV 42.02 亿基准合理。核心风险是上架率 63%（行业最低）+ 79% 收入 2026 年集中到期。核心优势是北京副中心区位 + 4 网一级节点组合（防御性底盘）。Cap Rate 8.27% 已充分反映风险。</p>
+<hr />
+<h3 id="auto-h-103-e2bfca">1.3 纵轴二：产品端——机构间 REITs 条款的定价含义</h3>
+<h4>1.3.1 产品要素对照</h4>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>汇天机构间 REITs</th>
+<th>公募 REITs（润泽/万国）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>产品类型</td>
+<td>机构间私募 REITs（类 REITs）</td>
+<td>公募 REITs</td>
+</tr>
+<tr>
+<td>审批机构</td>
+<td>上交所（机构间私募产品）</td>
+<td>证监会+交易所</td>
+</tr>
+<tr>
+<td>发行规模（平价）</td>
+<td>43.40 亿</td>
+<td>润泽 45 亿 / 万国 24 亿</td>
+</tr>
+<tr>
+<td>询价区间</td>
+<td>平价 80%-120% = 34.72-52.08 亿</td>
+<td>网下询价 ±10-15%</td>
+</tr>
+<tr>
+<td>产品期限</td>
+<td>35 年</td>
+<td>润泽 40 年 / 万国 44 年</td>
+</tr>
+<tr>
+<td>开放退出</td>
+<td>每 3 年</td>
+<td>随时（T+1 交易）</td>
+</tr>
+<tr>
+<td>分配机制</td>
+<td>普通分配 ≥80% 可供分配 + 留存每 3 年释放</td>
+<td>≥90% 可供分配金额（强制，即时全额）</td>
+</tr>
+<tr>
+<td>锁定期</td>
+<td>10 年不得转让</td>
+<td>原始权益人通常 3-5 年</td>
+</tr>
+<tr>
+<td>亏损顺序</td>
+<td>先汇天 20% → 后天保 34%</td>
+<td>无（标准平层结构）</td>
+</tr>
+</tbody>
+</table>
+<h4>1.3.2 制度差异与估值折价</h4>
+<p>机构间 REITs 相对公募在 6 个维度存在制度劣势：</p>
+<table>
+<thead>
+<tr>
+<th>差异因子</th>
+<th style="text-align:center">要求补偿</th>
+<th>推导依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>流动性（T+1 vs 每 3 年开放退出）</td>
+<td style="text-align:center">高</td>
+<td>私募流动性折价国际经验 5-10%（NAREIT）</td>
+</tr>
+<tr>
+<td>分红确定性（≥90% vs ≥80% + 20% 留存 3 年释放）</td>
+<td style="text-align:center">中高</td>
+<td>20% 现金流延迟 3 年，按折现率 8.5% 计算约 6% 现值折损</td>
+</tr>
+<tr>
+<td>信息透明度（公开季报+年报 vs 私募信披）</td>
+<td style="text-align:center">中</td>
+<td>信息不对称（CFA Institute, 2024）</td>
+</tr>
+<tr>
+<td>退出确定性（二级市场 vs 持有人大会同意）</td>
+<td style="text-align:center">中</td>
+<td>退出路径可预期性差异</td>
+</tr>
+<tr>
+<td>投资者保护（证监会+交易所 vs 合同约定）</td>
+<td style="text-align:center">中低</td>
+<td>监管保护差异</td>
+</tr>
+<tr>
+<td>可质押性（标准质押物 vs 不可/折价高）</td>
+<td style="text-align:center">低</td>
+<td>资产再利用价值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键发现</strong>：机构间 REITs 市场通过「估值折价」而非「分派率加成」来补偿制度劣势。世纪乌兰 ABS（乌兰察布）实证：底层估值 27.18 亿 → 实际发行 17.02 亿，折价 37.4%（LTV 62.6%）。汇天平价发行 1.033x（43.40/42.02）已优于机构间市场惯例。</p>
+<h4>1.3.3 兜底条款与劣后保护垫</h4>
+<table>
+<thead>
+<tr>
+<th>条款</th>
+<th>具体内容</th>
+<th style="text-align:center">定价方向</th>
+<th>量化逻辑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5% IRR 强制赎回</td>
+<td>特别处分事件触发时，外部投资人优先按 5% IRR 获取本金+收益</td>
+<td style="text-align:center">↑ 正面</td>
+<td>内嵌看跌期权，消除尾部风险</td>
+</tr>
+<tr>
+<td>汇天 20% 劣后</td>
+<td>汇天网络持 20% 份额参与业绩对赌，先承担亏损</td>
+<td style="text-align:center">↑ 正面</td>
+<td>优先级 46% 获得 54% 劣后保护</td>
+</tr>
+<tr>
+<td>天保 34% 劣后</td>
+<td>在汇天 20% 之后承担亏损，合计 54% 保护垫</td>
+<td style="text-align:center">↑ 正面</td>
+<td>NOI 需下降超 54% 才影响优先级当期分红</td>
+</tr>
+<tr>
+<td>75% 现金流触发线</td>
+<td>连续两年经营净现金流 &lt; 目标值 75% → 特别处分</td>
+<td style="text-align:center">↓ 负面</td>
+<td>与 5% IRR 赎回部分对冲</td>
+</tr>
+</tbody>
+</table>
+<p>54% 劣后保护垫的信用增级效果：优先级份额信用风险相当于从 A/AA 提升至 AAA 区间（参考中债登 ABS 利差：5 年期 AA ~120bp / AAA ~40bp，利差约 80bp）。但对 34% 份额自身而言，增级效果大部分让渡给外部投资人，净影响有限。</p>
+<p><strong>产品端小结</strong>：机构间 REITs 制度劣势（6 维）压低 IRR 至 5% 左右。兜底条款和 54% 劣后保护垫是正向条款（降低尾部风险），但主要是为吸引外部投资人而非提升自身收益。世纪乌兰 LTV 62.6% 的极端折价验证了机构间市场的定价规律——汇天平价发行已是优于惯例的结果。</p>
+<hr />
+<h3 id="auto-h-104-89af59">1.4 纵轴三：治理端——34% 份额的控制力与回报</h3>
+<h4>1.4.1 现状权力边界</h4>
+<div class="ascii-figure ascii-treemap"><div class="ascii-figure-title">📊 控股 / 持股 / 比例分布（自动 Treemap）</div><div class="ascii-treemap-bar"><div class="ascii-treemap-cell" style="width:18.68%;background:#1a365d;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">34.0%</div><div class="ascii-treemap-name" style="color:#fff">天保 34% 投票权 &lt; 1/3 → 无法单方否决重大事项</div></div><div class="ascii-treemap-cell" style="width:18.68%;background:#2c5282;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">34.0%</div><div class="ascii-treemap-name" style="color:#fff">重大事项通常需 2/3 以上通过 → 34% = &quot;重大影响&quot;而非&quot;控制&quot;</div></div><div class="ascii-treemap-cell" style="width:10.99%;background:#d69e2e;color:#1a202c"><div class="ascii-treemap-pct" style="color:#1a202c">20.0%</div><div class="ascii-treemap-name" style="color:#1a202c">天保 1/5 票 = 20% → 不足以主导运营决策</div></div><div class="ascii-treemap-cell" style="width:32.97%;background:#2f855a;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">60.0%</div><div class="ascii-treemap-name" style="color:#fff">管理人+运管联合 = 3/5 = 60% → 过半</div></div><div class="ascii-treemap-cell" style="width:18.68%;background:#718096;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">34.0%</div><div class="ascii-treemap-name" style="color:#fff">现状判断: 34% 份额在当前治理架构下 → &quot;重大影响&quot; → 权益法核算 → 不能并表</div></div></div></div>
+<h4>1.4.2 并表升级路径：A+C+D 联动</h4>
+<p>仅靠 34% 份额不足以并表，但通过治理条款组合可构建实质控制（《企业会计准则第 33 号》第七条三要素）：</p>
+<table>
+<thead>
+<tr>
+<th>路径</th>
+<th>操作方式</th>
+<th style="text-align:center">并表强度</th>
+<th style="text-align:center">实操性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>路径 A: 经管会席位主导</td>
+<td>天保 34% = 最大份额持有人 1 票 + 一票否决条款补足</td>
+<td style="text-align:center">强</td>
+<td style="text-align:center">高</td>
+</tr>
+<tr>
+<td>路径 C: 经管会一票否决</td>
+<td>章程写入&quot;重大事项需最大份额持有人书面同意&quot;</td>
+<td style="text-align:center">强</td>
+<td style="text-align:center">高</td>
+</tr>
+<tr>
+<td>路径 D: 一致行动协议</td>
+<td>天保+汇天+运管方三方签&quot;重大事项一致行动&quot;备忘录</td>
+<td style="text-align:center">中强</td>
+<td style="text-align:center">高</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A+C+D 组合的并表论证</strong>（不依赖汇天投票权委托）：</p>
+<ul>
+<li>要素一（权力）✅：34% 最大份额持有人 + 一票否决条款 + 运管方协同 → 实质单方主导</li>
+<li>要素二（可变回报）✅：34% 现金流（半年分红）+ 运管费收入 → 回报量与份额比例匹配</li>
+<li>要素三（权力影响回报）✅：经管会实质主导权 + 重大事项决策权 + 运管机构任命权</li>
+</ul>
+<h4>1.4.3 不同溢价下的 IRR</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">溢价</th>
+<th style="text-align:center">34% 投资额(亿)</th>
+<th style="text-align:center">基准 IRR</th>
+<th style="text-align:center">悲观 IRR（上架率 63%）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0%</td>
+<td style="text-align:center">14.76</td>
+<td style="text-align:center"><strong>6.35%</strong></td>
+<td style="text-align:center">5.26%</td>
+</tr>
+<tr>
+<td style="text-align:center">5%</td>
+<td style="text-align:center">15.49</td>
+<td style="text-align:center"><strong>5.65%</strong></td>
+<td style="text-align:center">4.58%</td>
+</tr>
+<tr>
+<td style="text-align:center">10%</td>
+<td style="text-align:center">16.23</td>
+<td style="text-align:center"><strong>5.00%</strong></td>
+<td style="text-align:center">3.94%</td>
+</tr>
+<tr>
+<td style="text-align:center">15%</td>
+<td style="text-align:center">16.97</td>
+<td style="text-align:center"><strong>4.38%</strong></td>
+<td style="text-align:center">3.34%</td>
+</tr>
+<tr>
+<td style="text-align:center">19%</td>
+<td style="text-align:center">17.56</td>
+<td style="text-align:center"><strong>3.88%</strong></td>
+<td style="text-align:center"><strong>2.88%</strong>（≈ 国债线）</td>
+</tr>
+<tr>
+<td style="text-align:center">20%</td>
+<td style="text-align:center">17.71</td>
+<td style="text-align:center"><strong>3.80%</strong></td>
+<td style="text-align:center"><strong>2.77%</strong>（&lt; 国债线）</td>
+</tr>
+</tbody>
+</table>
+<p>IRR 对溢价的敏感度约 <strong>每 +1% 溢价 → IRR -0.13pp</strong>。溢价 19% 是硬约束——悲观 IRR 触及国债 2.80%。溢价 20% 安全边际为负。</p>
+<p><strong>治理端小结</strong>：34% 份额现状 = 重大影响非控制。A+C+D 联动可将 34% 从「被动投资」升级为「实质控制并表」。IRR 是财务核心决策变量——溢价 10% 时基准 IRR 5.00%，悲观 IRR 3.94% &gt; 国债 2.80%。溢价 10-15% 是财务上可接受的区间。</p>
+<hr />
+<h3 id="auto-h-105-8d4cc7">1.5 横轴一：同业对标</h3>
+<div class="chart-wrapper"><figure class="chart-figure chart-multi_radar "><div class="line-legend"><span class="lg-dot" style="background:#1a365d"></span>晶能光电<span class="lg-dot" style="background:#d69e2e"></span>三安光电<span class="lg-dot" style="background:#2c5282"></span>兆驰股份</div><svg viewBox="0 0 940 940" class="multiradar-svg" width="100%" height="auto"><polygon points="50.0,39.4 59.1,44.7 59.1,55.3 50.0,60.6 40.9,55.3 40.9,44.7" fill="none" stroke="#718096" stroke-width="0.4" stroke-dasharray="2,2"/><polygon points="50.0,28.9 68.3,39.4 68.3,60.6 50.0,71.1 31.7,60.6 31.7,39.4" fill="none" stroke="#718096" stroke-width="0.4" stroke-dasharray="2,2"/><polygon points="50.0,18.0 77.7,34.0 77.7,66.0 50.0,82.0 22.3,66.0 22.3,34.0" fill="none" stroke="#718096" stroke-width="0.4" stroke-dasharray="2,2"/><line x1="470.00" y1="470.00" x2="470.00" y2="169.20" stroke="#718096" stroke-width="0.4"/><text x="470.00" y="112.80" text-anchor="middle" font-size="16.9px" fill="#1a365d" font-weight="700">净利率</text><line x1="470.00" y1="470.00" x2="730.38" y2="319.60" stroke="#718096" stroke-width="0.4"/><text x="795.24" y="300.80" text-anchor="middle" font-size="16.9px" fill="#1a365d" font-weight="700">毛利率</text><line x1="470.00" y1="470.00" x2="730.38" y2="620.40" stroke="#718096" stroke-width="0.4"/><text x="795.24" y="676.80" text-anchor="middle" font-size="16.9px" fill="#1a365d" font-weight="700">ROE</text><line x1="470.00" y1="470.00" x2="470.00" y2="770.80" stroke="#718096" stroke-width="0.4"/><text x="470.00" y="864.80" text-anchor="middle" font-size="16.9px" fill="#1a365d" font-weight="700">研发占比</text><line x1="470.00" y1="470.00" x2="209.62" y2="620.40" stroke="#718096" stroke-width="0.4"/><text x="144.76" y="676.80" text-anchor="middle" font-size="16.9px" fill="#1a365d" font-weight="700">客户集中度</text><line x1="470.00" y1="470.00" x2="209.62" y2="319.60" stroke="#718096" stroke-width="0.4"/><text x="144.76" y="300.80" text-anchor="middle" font-size="16.9px" fill="#1a365d" font-weight="700">产能利用率</text><polygon points="50.0,24.4 74.9,35.6 72.2,62.8 50.0,72.4 30.6,61.2 27.8,37.2" fill="#1a365d" fill-opacity="0.18" stroke="#1a365d" stroke-width="1.8"/><polygon points="50.0,43.6 61.1,43.6 58.3,54.8 50.0,66.0 33.4,59.6 30.6,38.8" fill="#d69e2e" fill-opacity="0.18" stroke="#d69e2e" stroke-width="1.8"/><polygon points="50.0,40.4 63.9,42.0 61.1,56.4 50.0,62.8 36.1,58.0 30.6,38.8" fill="#2c5282" fill-opacity="0.18" stroke="#2c5282" stroke-width="1.8"/></svg></figure></div>
+
+<h4>1.5.1 资产质量对标</h4>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align:center">汇天（机构间）</th>
+<th style="text-align:center">南方润泽 REIT（公募）</th>
+<th style="text-align:center">南方万国 REIT（公募）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>底层资产</td>
+<td style="text-align:center">北京通州东八栋</td>
+<td style="text-align:center">廊坊 A-18</td>
+<td style="text-align:center">昆山国金</td>
+</tr>
+<tr>
+<td>IT 容量(MW)</td>
+<td style="text-align:center">74.60</td>
+<td style="text-align:center">42.53</td>
+<td style="text-align:center">29.04</td>
+</tr>
+<tr>
+<td>不动产估值(亿)</td>
+<td style="text-align:center">42.02（NAV）</td>
+<td style="text-align:center">37.25</td>
+<td style="text-align:center">未单独披露</td>
+</tr>
+<tr>
+<td>估值单价(万/MW)</td>
+<td style="text-align:center">5,633</td>
+<td style="text-align:center">8,757</td>
+<td style="text-align:center">—</td>
+</tr>
+<tr>
+<td>Cap Rate</td>
+<td style="text-align:center">8.27%</td>
+<td style="text-align:center">~7.1%</td>
+<td style="text-align:center">~5.9%</td>
+</tr>
+<tr>
+<td>上架率</td>
+<td style="text-align:center">63.0%</td>
+<td style="text-align:center">~99%</td>
+<td style="text-align:center">~95%</td>
+</tr>
+<tr>
+<td>单柜功率</td>
+<td style="text-align:center">4.4 kW</td>
+<td style="text-align:center">7.2 kW</td>
+<td style="text-align:center">7 kW</td>
+</tr>
+<tr>
+<td>WALE</td>
+<td style="text-align:center">1-3 年</td>
+<td style="text-align:center">8.75 年</td>
+<td style="text-align:center">5-7 年</td>
+</tr>
+<tr>
+<td>IPO 分派率</td>
+<td style="text-align:center">6.63-6.92%（平价）</td>
+<td style="text-align:center">5.32-6.38%</td>
+<td style="text-align:center">5.07-5.20%</td>
+</tr>
+<tr>
+<td>发行/估值</td>
+<td style="text-align:center">1.033x（平价）</td>
+<td style="text-align:center">1.208x（溢价 20.8%）</td>
+<td style="text-align:center">—</td>
+</tr>
+</tbody>
+</table>
+<p>汇天估值单价 5,633 万/MW vs 润泽 8,757 万/MW，差异主要来自：(a) 上架率 63% vs 99%（主因），(b) WALE 1-3 年 vs 8.75 年，(c) 公募流动性溢价。若汇天上架率恢复至 85%，按弹性 1.20 推算 NAV 约 53 亿，单价约 7,105 万/MW，仍低于润泽，剩余差距由公募流动性溢价和长约结构解释。</p>
+<h4>1.5.2 机构间 REITs 市场定价规律</h4>
+<p>截至 2026 年 7 月已发行的 4 单 IDC 机构间 REITs/ABS：</p>
+<table>
+<thead>
+<tr>
+<th>案例</th>
+<th style="text-align:center">发行规模(亿)</th>
+<th style="text-align:center">底层估值(亿)</th>
+<th style="text-align:center">发行/估值</th>
+<th>区位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>太保-世纪互联 ABS</td>
+<td style="text-align:center">8.6</td>
+<td style="text-align:center">未披露</td>
+<td style="text-align:center">—</td>
+<td>北京/上海</td>
+</tr>
+<tr>
+<td>世纪泓源 ABS</td>
+<td style="text-align:center">46.54</td>
+<td style="text-align:center">未披露</td>
+<td style="text-align:center">—</td>
+<td>江苏太仓</td>
+</tr>
+<tr>
+<td>世纪乌兰 ABS</td>
+<td style="text-align:center">17.02</td>
+<td style="text-align:center">27.18</td>
+<td style="text-align:center"><strong>0.626x</strong>（折价 37.4%）</td>
+<td>内蒙古乌兰察布</td>
+</tr>
+<tr>
+<td>中信-万国 ABS</td>
+<td style="text-align:center">~16.1</td>
+<td style="text-align:center">~18.35</td>
+<td style="text-align:center"><strong>~0.88x</strong></td>
+<td>北京南法信</td>
+</tr>
+<tr>
+<td><strong>汇天（本项目）</strong></td>
+<td style="text-align:center"><strong>43.40（平价）</strong></td>
+<td style="text-align:center"><strong>42.02</strong></td>
+<td style="text-align:center"><strong>1.033x</strong></td>
+<td><strong>北京通州</strong></td>
+</tr>
+</tbody>
+</table>
+<p>市场规律：非一线城市折价显著（LTV 60-70%），北京区位享有 2-3x 单价溢价。汇天平价 1.033x 已优于机构间惯例，溢价 20%（1.239x）则要求投资者接受「公募级定价 + 机构间级流动性」，市场化销售难度极高。</p>
+<hr />
+<h3 id="auto-h-106-db62e2">1.6 横轴二：情景压力——IRR 三情景</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>悲观</th>
+<th>基准</th>
+<th>乐观</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上架率(2027+)</td>
+<td>58%（华为不续）</td>
+<td>68%（项目方预测）</td>
+<td>75%（续签+新签）</td>
+</tr>
+<tr>
+<td>Cap Rate（退出时）</td>
+<td>9.5%</td>
+<td>8.27%</td>
+<td>7.0%</td>
+</tr>
+<tr>
+<td>10 年国债</td>
+<td>2.80%</td>
+<td>2.80%</td>
+<td>2.80%</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align:center">34% IRR（溢价 10%）</th>
+<th style="text-align:center">vs GDP 2.8%</th>
+<th style="text-align:center">vs WACC 5.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲观（上架率 58%）</td>
+<td style="text-align:center"><strong>3.94%</strong></td>
+<td style="text-align:center">✅ 高于</td>
+<td style="text-align:center">❌ 低于</td>
+</tr>
+<tr>
+<td>基准（上架率 68%）</td>
+<td style="text-align:center"><strong>5.00%</strong></td>
+<td style="text-align:center">✅ 高于</td>
+<td style="text-align:center">⚠️ 接近</td>
+</tr>
+<tr>
+<td>乐观（上架率 75%）</td>
+<td style="text-align:center"><strong>5.8-6.5%</strong></td>
+<td style="text-align:center">✅ 高于</td>
+<td style="text-align:center">✅ 高于</td>
+</tr>
+</tbody>
+</table>
+<p>核心发现：基准情景 IRR 5.00% 勉强接近但未覆盖 WACC 5.5%。这意味着即使项目方自身预测的上架率恢复（68%）兑现，纯市场化投资也无法覆盖资金成本。仅乐观情景（上架率 75% + Cap Rate 压缩至 7.0%）的 IRR 才超过 WACC，但该情景依赖京东/华为续签 + 新客户落地，确定性不足。</p>
+<hr />
+<h3 id="auto-h-107-234b5e">1.7 横轴三：替代选择——机会成本</h3>
+<table>
+<thead>
+<tr>
+<th>替代方案</th>
+<th style="text-align:center">预期 IRR</th>
+<th style="text-align:center">流动性</th>
+<th style="text-align:center">控制力</th>
+<th>与汇天 34% 对比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>汇天 34% REITs（溢价 10%）</strong></td>
+<td style="text-align:center"><strong>5.00%</strong></td>
+<td style="text-align:center">❌ 10 年锁定</td>
+<td style="text-align:center">⚠️ 1/5 经管委</td>
+<td><strong>基准</strong></td>
+</tr>
+<tr>
+<td>南方润泽 REITs（公募）</td>
+<td style="text-align:center">~6.5-7.5%</td>
+<td style="text-align:center">✅ T+1</td>
+<td style="text-align:center">❌ 无</td>
+<td>🔴 流动性+收益双优</td>
+</tr>
+<tr>
+<td>南方万国 REITs（公募）</td>
+<td style="text-align:center">~5.5-6.5%</td>
+<td style="text-align:center">✅ T+1</td>
+<td style="text-align:center">❌ 无</td>
+<td>🔴 流动性更优</td>
+</tr>
+<tr>
+<td>自建 IDC（北京郊区）</td>
+<td style="text-align:center">8-12%</td>
+<td style="text-align:center">❌ 长期</td>
+<td style="text-align:center">✅ 完全</td>
+<td>🟡 高风险高回报</td>
+</tr>
+<tr>
+<td>购买存量 IDC 资产</td>
+<td style="text-align:center">7-10%</td>
+<td style="text-align:center">❌ 长期</td>
+<td style="text-align:center">✅ 完全</td>
+<td>🟡 控制权溢价但 CapEx 高</td>
+</tr>
+<tr>
+<td>持有国债（10 年期）</td>
+<td style="text-align:center"><strong>2.80%</strong></td>
+<td style="text-align:center">✅ 无锁定</td>
+<td style="text-align:center">❌ 无</td>
+<td>🟢 风险下限</td>
+</tr>
+</tbody>
+</table>
+<p>机会成本量化：若 16.23 亿（溢价 10% 时 34% 认购价）不投汇天而投公募 REITs：</p>
+<div class="ascii-figure ascii-treemap"><div class="ascii-figure-title">📊 控股 / 持股 / 比例分布（自动 Treemap）</div><div class="ascii-treemap-bar"><div class="ascii-treemap-cell" style="width:44.30%;background:#1a365d;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">7.0%</div><div class="ascii-treemap-name" style="color:#fff">方案 A: 16.23 × 1.07^10 ≈ 31.93 亿 → 超额 +6.28 亿</div></div><div class="ascii-treemap-cell" style="width:37.97%;background:#2c5282;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">6.0%</div><div class="ascii-treemap-name" style="color:#fff">方案 B: 16.23 × 1.06^10 ≈ 29.06 亿 → 超额 +3.41 亿</div></div><div class="ascii-treemap-cell" style="width:17.72%;background:#d69e2e;color:#1a202c"><div class="ascii-treemap-pct" style="color:#1a202c">2.8%</div><div class="ascii-treemap-name" style="color:#1a202c">方案 C:     16.23 × 1.028^10 ≈ 21.35 亿 → 低于汇天 -4.30 亿</div></div></div></div>
+<p>从纯财务回报角度，汇天 34% REITs 不如公募 REITs。从安全角度，优于自建/收购 IDC。汇天的独特价值不在纯财务回报，而在其不可复制的资产属性（4 网一级节点 + 北京副中心区位 + CGWNET 授权）。</p>
+<hr />
+<h3 id="auto-h-108-17d0c0">1.8 纵横交汇：估值区间与投资价值结论</h3>
+<div class="chart-wrapper"><figure class="chart-figure chart-boxplot "><svg viewBox="0 0 940 940" class="boxplot-svg" width="100%" height="auto"><line x1="94.00" y1="752.00" x2="893.00" y2="752.00" stroke="#718096" stroke-width="0.3" stroke-dasharray="2,2"/><text x="84.60" y="761.40" text-anchor="end" font-size="14.1px" fill="#718096">16.0</text><line x1="94.00" y1="599.72" x2="893.00" y2="599.72" stroke="#718096" stroke-width="0.3" stroke-dasharray="2,2"/><text x="84.60" y="609.12" text-anchor="end" font-size="14.1px" fill="#718096">22.5</text><line x1="94.00" y1="446.50" x2="893.00" y2="446.50" stroke="#718096" stroke-width="0.3" stroke-dasharray="2,2"/><text x="84.60" y="455.90" text-anchor="end" font-size="14.1px" fill="#718096">29.0</text><line x1="94.00" y1="293.28" x2="893.00" y2="293.28" stroke="#718096" stroke-width="0.3" stroke-dasharray="2,2"/><text x="84.60" y="302.68" text-anchor="end" font-size="14.1px" fill="#718096">35.5</text><line x1="94.00" y1="141.00" x2="893.00" y2="141.00" stroke="#718096" stroke-width="0.3" stroke-dasharray="2,2"/><text x="84.60" y="150.40" text-anchor="end" font-size="14.1px" fill="#718096">42.0</text><line x1="94.00" y1="94.00" x2="94.00" y2="752.00" stroke="#718096" stroke-width="0.5"/><line x1="94.00" y1="752.00" x2="893.00" y2="752.00" stroke="#718096" stroke-width="0.5"/><line x1="197.40" y1="540.50" x2="197.40" y2="611.00" stroke="#1a365d" stroke-width="0.5"/><line x1="197.40" y1="705.00" x2="197.40" y2="752.00" stroke="#1a365d" stroke-width="0.5"/><line x1="172.02" y1="540.50" x2="222.78" y2="540.50" stroke="#1a365d" stroke-width="0.8"/><line x1="172.02" y1="752.00" x2="222.78" y2="752.00" stroke="#1a365d" stroke-width="0.8"/><rect x="165.44" y="611.00" width="63.92" height="94.00" fill="#1a365d" fill-opacity="0.6" stroke="#1a365d" stroke-width="0.8"/><line x1="165.44" y1="672.10" x2="229.36" y2="672.10" stroke="#d69e2e" stroke-width="1.5"/><text x="197.40" y="808.40" text-anchor="middle" font-size="16.0px" fill="#1a365d" font-weight="700">晶能光电</text><line x1="357.20" y1="235.00" x2="357.20" y2="376.00" stroke="#1a365d" stroke-width="0.5"/><line x1="357.20" y1="517.00" x2="357.20" y2="611.00" stroke="#1a365d" stroke-width="0.5"/><line x1="331.82" y1="235.00" x2="382.58" y2="235.00" stroke="#1a365d" stroke-width="0.8"/><line x1="331.82" y1="611.00" x2="382.58" y2="611.00" stroke="#1a365d" stroke-width="0.8"/><rect x="325.24" y="376.00" width="63.92" height="141.00" fill="#1a365d" fill-opacity="0.6" stroke="#1a365d" stroke-width="0.8"/><line x1="325.24" y1="470.00" x2="389.16" y2="470.00" stroke="#d69e2e" stroke-width="1.5"/><text x="357.20" y="808.40" text-anchor="middle" font-size="16.0px" fill="#1a365d" font-weight="700">三安光电</text><line x1="517.00" y1="352.50" x2="517.00" y2="470.00" stroke="#1a365d" stroke-width="0.5"/><line x1="517.00" y1="611.00" x2="517.00" y2="705.00" stroke="#1a365d" stroke-width="0.5"/><line x1="491.62" y1="352.50" x2="542.38" y2="352.50" stroke="#1a365d" stroke-width="0.8"/><line x1="491.62" y1="705.00" x2="542.38" y2="705.00" stroke="#1a365d" stroke-width="0.8"/><rect x="485.04" y="470.00" width="63.92" height="141.00" fill="#1a365d" fill-opacity="0.6" stroke="#1a365d" stroke-width="0.8"/><line x1="485.04" y1="540.50" x2="548.96" y2="540.50" stroke="#d69e2e" stroke-width="1.5"/><text x="517.00" y="808.40" text-anchor="middle" font-size="16.0px" fill="#1a365d" font-weight="700">兆驰股份</text><line x1="676.80" y1="305.50" x2="676.80" y2="423.00" stroke="#1a365d" stroke-width="0.5"/><line x1="676.80" y1="564.00" x2="676.80" y2="658.00" stroke="#1a365d" stroke-width="0.5"/><line x1="651.42" y1="305.50" x2="702.18" y2="305.50" stroke="#1a365d" stroke-width="0.8"/><line x1="651.42" y1="658.00" x2="702.18" y2="658.00" stroke="#1a365d" stroke-width="0.8"/><rect x="644.84" y="423.00" width="63.92" height="141.00" fill="#1a365d" fill-opacity="0.6" stroke="#1a365d" stroke-width="0.8"/><line x1="644.84" y1="493.50" x2="708.76" y2="493.50" stroke="#d69e2e" stroke-width="1.5"/><text x="676.80" y="808.40" text-anchor="middle" font-size="16.0px" fill="#1a365d" font-weight="700">华灿光电</text><line x1="836.60" y1="141.00" x2="836.60" y2="305.50" stroke="#1a365d" stroke-width="0.5"/><line x1="836.60" y1="493.50" x2="836.60" y2="587.50" stroke="#1a365d" stroke-width="0.5"/><line x1="811.22" y1="141.00" x2="861.98" y2="141.00" stroke="#1a365d" stroke-width="0.8"/><line x1="811.22" y1="587.50" x2="861.98" y2="587.50" stroke="#1a365d" stroke-width="0.8"/><rect x="804.64" y="305.50" width="63.92" height="188.00" fill="#1a365d" fill-opacity="0.6" stroke="#1a365d" stroke-width="0.8"/><line x1="804.64" y1="399.50" x2="868.56" y2="399.50" stroke="#d69e2e" stroke-width="1.5"/><text x="836.60" y="808.40" text-anchor="middle" font-size="16.0px" fill="#1a365d" font-weight="700">聚灿光电</text></svg></figure></div>
+
+<h4>1.8.1 合理估值区间</h4>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>方法</th>
+<th style="text-align:center">估值</th>
+<th style="text-align:center">与 NAV 的关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>戴德梁行</td>
+<td>NAV 法</td>
+<td style="text-align:center">42.02 亿</td>
+<td style="text-align:center">1.00x（基准）</td>
+</tr>
+<tr>
+<td>纵二推导</td>
+<td>机构间 LTV 参考（上限 0.95x + 北京区位 +20%）</td>
+<td style="text-align:center">45.6 亿</td>
+<td style="text-align:center">1.09x</td>
+</tr>
+<tr>
+<td>横一对标</td>
+<td>机构间惯例折价上限</td>
+<td style="text-align:center">46.2 亿</td>
+<td style="text-align:center">1.10x</td>
+</tr>
+<tr>
+<td>纵三推导</td>
+<td>IRR 约束（悲观 &gt; 国债）</td>
+<td style="text-align:center">≤50.0 亿</td>
+<td style="text-align:center">≤1.19x</td>
+</tr>
+<tr>
+<td><strong>纵横交汇区间</strong></td>
+<td></td>
+<td style="text-align:center"><strong>42.0-45.6 亿</strong></td>
+<td style="text-align:center"><strong>1.00-1.09x</strong></td>
+</tr>
+</tbody>
+</table>
+<p>合理溢价上限 = 8.5%（以 NAV 42.02 亿为基准）。</p>
+<h4>1.8.2 与发行方案对标</h4>
+<table>
+<thead>
+<tr>
+<th>方案</th>
+<th style="text-align:center">发行规模</th>
+<th style="text-align:center">溢价</th>
+<th style="text-align:center">是否在合理区间内</th>
+<th>判断依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平价发行</td>
+<td style="text-align:center">43.40 亿</td>
+<td style="text-align:center">0%</td>
+<td style="text-align:center">🟢 是</td>
+<td>下限 = NAV 42.02 亿</td>
+</tr>
+<tr>
+<td>溢价 5%</td>
+<td style="text-align:center">45.57 亿</td>
+<td style="text-align:center">5%</td>
+<td style="text-align:center">🟢 是</td>
+<td>接近纵二 LTV 参考法上限</td>
+</tr>
+<tr>
+<td>溢价 8.5%</td>
+<td style="text-align:center">47.08 亿</td>
+<td style="text-align:center">8.5%</td>
+<td style="text-align:center">🟡 边界</td>
+<td>触及三项约束中最严格者</td>
+</tr>
+<tr>
+<td>溢价 10%</td>
+<td style="text-align:center">47.74 亿</td>
+<td style="text-align:center">10%</td>
+<td style="text-align:center">🟡 超出但幅度可控</td>
+<td>基准 IRR 5.00% 仍可接受</td>
+</tr>
+<tr>
+<td>溢价 15%</td>
+<td style="text-align:center">49.91 亿</td>
+<td style="text-align:center">15%</td>
+<td style="text-align:center">🔴 超出</td>
+<td>悲观 IRR 3.34%，安全边际薄</td>
+</tr>
+<tr>
+<td>溢价 20%</td>
+<td style="text-align:center">52.08 亿</td>
+<td style="text-align:center">20%</td>
+<td style="text-align:center">🔴 显著超出</td>
+<td>悲观 IRR 2.77% &lt; 国债</td>
+</tr>
+</tbody>
+</table>
+<h4>1.8.3 34% 投资价值总判断</h4>
+<table>
+<thead>
+<tr>
+<th>判断维度</th>
+<th>结论</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>资产质量</td>
+<td>区位稀缺但上架率最低、单柜功率 4.4 kW 是物理瓶颈</td>
+<td>纵一</td>
+</tr>
+<tr>
+<td>估值合理性</td>
+<td>NAV 42.02 亿是合理保守基准，Cap Rate 8.27% 处于合理区间</td>
+<td>纵一 + 横一</td>
+</tr>
+<tr>
+<td>合理溢价上限</td>
+<td>8.5%（45.6 亿）</td>
+<td>纵横交汇</td>
+</tr>
+<tr>
+<td>谈判可接受上限</td>
+<td>10-12%（47.7-48.6 亿），需续签落地前提</td>
+<td>纵三 IRR 约束</td>
+</tr>
+<tr>
+<td>IRR（溢价 10%）</td>
+<td>基准 5.00%，悲观 3.94% &gt; 国债 2.80%</td>
+<td>纵三</td>
+</tr>
+<tr>
+<td>IRR vs WACC</td>
+<td>基准 IRR 5.00% &lt; WACC 5.5%，纯市场化不覆盖资金成本</td>
+<td>横二</td>
+</tr>
+<tr>
+<td>机会成本</td>
+<td>不如公募 REITs（IRR 6-7%），优于国债（2.80%）</td>
+<td>横三</td>
+</tr>
+<tr>
+<td><strong>纯市场化总判断</strong></td>
+<td><strong>风险收益一般——安全边际存在但超额收益不足</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>溢价区间决策框架</strong>：</p>
+<div class="ascii-figure ascii-treemap"><div class="ascii-figure-title">📊 控股 / 持股 / 比例分布（自动 Treemap）</div><div class="ascii-treemap-bar"><div class="ascii-treemap-cell" style="width:0.00%;background:#1a365d;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">0.0%</div><div class="ascii-treemap-name" style="color:#fff">溢价 0-5%:</div></div><div class="ascii-treemap-cell" style="width:9.32%;background:#2c5282;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">5.7%</div><div class="ascii-treemap-name" style="color:#fff">→ 基准 IRR 5.65-6.35%，悲观 IRR 4.58-5.26% &gt;&gt; 国债 2.80%</div></div><div class="ascii-treemap-cell" style="width:8.24%;background:#d69e2e;color:#1a202c"><div class="ascii-treemap-pct" style="color:#1a202c">5.0%</div><div class="ascii-treemap-name" style="color:#1a202c">溢价 5-10%:</div></div><div class="ascii-treemap-cell" style="width:8.24%;background:#2f855a;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">5.0%</div><div class="ascii-treemap-name" style="color:#fff">→ 基准 IRR 5.00-5.65%，悲观 IRR 3.94-4.58%</div></div><div class="ascii-treemap-cell" style="width:16.49%;background:#718096;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">10.0%</div><div class="ascii-treemap-name" style="color:#fff">溢价 10-15%:</div></div><div class="ascii-treemap-cell" style="width:24.73%;background:#c53030;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">15.0%</div><div class="ascii-treemap-name" style="color:#fff">溢价 15-20%:</div></div><div class="ascii-treemap-cell" style="width:32.98%;background:#1a365d;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">20.0%</div><div class="ascii-treemap-name" style="color:#fff">→ 判断: 不建议接受。20% 溢价 = 安全边际为零。</div></div></div></div>
+<hr />
+<p><em>纯市场化分析日期：2026-07-14</em>
+<em>数据来源：09 纵横分析报告，基于项目汇报 v7、中信建投 v3 合作方案、戴德梁行评估报告、MX 金融数据核查</em>
+<em>本篇章不涉及任何合作机构的一揽子协同框架——协同价值的分析见后续篇章。</em></p>
+<hr />
+<h2 id="auto-h-2-dfc012">第二篇 一揽子合作框架</h2>
+
+<blockquote>
+<p>第一篇已从纯市场化角度完成 34% REITs 投资价值分析，结论为「风险收益一般——安全边际存在但超额收益不足」。本篇在此基础之上，引入天保控股体系的多主体协同框架，论证如何通过一揽子合作将「不优不劣」的投资升级为「多方共赢」的战略合作。</p>
+</blockquote>
+<h3 id="auto-h-109-33c772">2.1 战略协同必要性</h3>
+<div class="ascii-figure ascii-flow"><div class="ascii-figure-title">📋 路径流程图（自动转换）</div><div class="chart-wrapper"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" width="100%" style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;background:#f7fafc;border:1px solid #e2e8f0;border-radius:6px;margin:12px 0;display:block;height:auto"><rect x="30" y="14" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="32.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">核心矛盾:</text><line x1="390.0" y1="42" x2="390.0" y2="51" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,51 393.5,51 390.0,55" fill="#1a365d"/><rect x="30" y="54" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="72.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">汇天需要: 34% 资金来源（14.76-16.23 亿）+ REITs 估值提升 + 国企信用背书</text><line x1="390.0" y1="82" x2="390.0" y2="91" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,91 393.5,91 390.0,95" fill="#1a365d"/><rect x="30" y="94" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="112.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">天保需要: 解决基建 10 亿减值 + 能源转型 IDC 运营商</text><line x1="390.0" y1="122" x2="390.0" y2="131" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,131 393.5,131 390.0,135" fill="#1a365d"/><rect x="30" y="134" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="152.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">双方共赢点: 资源互换 + 信用共享 + 价值叠加</text><line x1="390.0" y1="162" x2="390.0" y2="171" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,171 393.5,171 390.0,175" fill="#1a365d"/><rect x="30" y="174" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="192.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">解法:</text><line x1="390.0" y1="202" x2="390.0" y2="211" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,211 393.5,211 390.0,215" fill="#1a365d"/><rect x="30" y="214" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="232.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">汇天获得: 34% 资金问题 + 国企信用增信</text><line x1="390.0" y1="242" x2="390.0" y2="251" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,251 393.5,251 390.0,255" fill="#1a365d"/><rect x="30" y="254" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="272.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">REITs 估值提升</text><line x1="390.0" y1="282" x2="390.0" y2="291" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,291 393.5,291 390.0,295" fill="#1a365d"/><rect x="30" y="294" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="312.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">发行成功</text><line x1="390.0" y1="322" x2="390.0" y2="331" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,331 393.5,331 390.0,335" fill="#1a365d"/><rect x="30" y="334" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="352.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">天保获得: 解决基建减值 + 能源港股转型</text><line x1="390.0" y1="362" x2="390.0" y2="371" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,371 393.5,371 390.0,375" fill="#1a365d"/><rect x="30" y="374" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="392.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">上市公司估值切换</text></svg></div></div>
+<p>纯市场化分析的结论是 IRR 5.00% &lt; WACC 5.5%，无法覆盖资金成本。战略协同的意义在于通过多主体资源互换，额外创造 1-2pp 的价值提升——国企信用增信降低 REITs 发行难度、运管协同改善运营效率、综合金融服务解决短期资金、GPU 租赁承担重资产压力——使整体回报超过门槛。</p>
+<h3 id="auto-h-110-e08f15">2.2 总体方案设计</h3>
+<p><strong>五方协同（天保基建 + 天保能源 + 新兴科技 + 其他综合金融 + 汇天）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>主体</th>
+<th>任务</th>
+<th>对汇天价值</th>
+<th>对天保价值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>REITs 投资人+基建转型</strong></td>
+<td>天保基建（或控股体系其他方）</td>
+<td>认购 34% 份额 + 解决 10 亿减值</td>
+<td>解决 14.76-16.23 亿资金缺口</td>
+<td>化解减值 + 估值切换</td>
+</tr>
+<tr>
+<td><strong>运管+绿电+港股转型</strong></td>
+<td>天保能源</td>
+<td>运管统筹 + 绿电供应 + 储能合作</td>
+<td>提升运营效率 + 绿电指标</td>
+<td>港股双主业故事 + 估值提升 30%+</td>
+</tr>
+<tr>
+<td><strong>重资产承担</strong></td>
+<td>新兴科技</td>
+<td>GPU 经营租赁（千卡级）</td>
+<td>承担 GPU 硬件重资产</td>
+<td>设备融租收益</td>
+</tr>
+<tr>
+<td><strong>综合金融</strong></td>
+<td>租赁+小贷+银行+信托+保险</td>
+<td>过桥+设备回租+市场化投资</td>
+<td>解决短期资金+多元化投资人</td>
+<td>辅助收益</td>
+</tr>
+<tr>
+<td><strong>REITs 标的</strong></td>
+<td>汇天网络</td>
+<td>34% REITs 装入</td>
+<td>获得 14.76-16.23 亿资金</td>
+<td>战略合作落地</td>
+</tr>
+</tbody>
+</table>
+<div class="ascii-figure ascii-flow"><div class="ascii-figure-title">📋 路径流程图（自动转换）</div><div class="chart-wrapper"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 350" width="100%" style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;background:#f7fafc;border:1px solid #e2e8f0;border-radius:6px;margin:12px 0;display:block;height:auto"><rect x="30" y="14" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="32.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│   天保控股（统筹）     │</text><line x1="390.0" y1="42" x2="390.0" y2="51" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,51 393.5,51 390.0,55" fill="#1a365d"/><rect x="30" y="54" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="72.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│天保基建│ │天保能源│     │新兴科技│     │其他公司│ │ 汇天   │</text><line x1="390.0" y1="82" x2="390.0" y2="91" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,91 393.5,91 390.0,95" fill="#1a365d"/><rect x="30" y="94" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="112.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│  REITs │ │  运管  │     │GPU租赁 │     │综合金融│ │ 网络  │</text><line x1="390.0" y1="122" x2="390.0" y2="131" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,131 393.5,131 390.0,135" fill="#1a365d"/><rect x="30" y="134" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="152.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│ + 减值 │ │+绿电  │     │        │     │        │ │       │</text><line x1="390.0" y1="162" x2="390.0" y2="171" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,171 393.5,171 390.0,175" fill="#1a365d"/><rect x="30" y="174" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="192.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│ 机构间 REITs │</text><line x1="390.0" y1="202" x2="390.0" y2="211" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,211 393.5,211 390.0,215" fill="#1a365d"/><rect x="30" y="214" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="232.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│ (43.4 亿)   │</text><line x1="390.0" y1="242" x2="390.0" y2="251" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,251 393.5,251 390.0,255" fill="#1a365d"/><rect x="30" y="254" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="272.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│  资本市场    │</text><line x1="390.0" y1="282" x2="390.0" y2="291" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,291 393.5,291 390.0,295" fill="#1a365d"/><rect x="30" y="294" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="312.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│ 投资人群体   │</text></svg></div></div>
+<h3 id="auto-h-111-5df150">2.3 关键命题拆解</h3>
+<p><strong>核心命题</strong>：</p>
+<ol>
+<li><strong>天保控股体系协助汇天解决 不低于34% REITs 资金来源</strong></li>
+<li><strong>增加国企信用让 REITs 更具市场吸引力，提高估值</strong></li>
+<li><strong>协调新兴科技+其他公司进行一揽子配合</strong></li>
+<li><strong>帮天保体系解决天保基建（10亿减值）和天保能源（港股转型）的问题</strong></li>
+</ol>
+<h3 id="auto-h-112-7e39b3">2.4 34% 投资主体选择：天保基建 vs 天保控股</h3>
+<p><strong>关键问题</strong>：34% REITs 份额由天保基建（上市公司）还是天保控股（集团）持有？</p>
+<table>
+<thead>
+<tr>
+<th>方案</th>
+<th>主体</th>
+<th>优势</th>
+<th>劣势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>天保基建</td>
+<td>上市公司直接持有，信息披露透明，资本市场故事清晰</td>
+<td>并表时需与交易所预沟通主营业务连续性</td>
+</tr>
+<tr>
+<td>B</td>
+<td>天保控股</td>
+<td>审批流程简单，不受上市公司监管约束，出资灵活</td>
+<td>不直接体现在上市公司报表</td>
+</tr>
+<tr>
+<td><strong>推荐</strong></td>
+<td><strong>天保基建</strong></td>
+<td>上市公司持有 REITs 份额有利于构建&quot;AI 算力基础设施&quot;资本市场故事，34% 出资可纳入长期股权投资</td>
+<td>并表时需与交易所预沟通主营业务连续性</td>
+</tr>
+</tbody>
+</table>
+<p><strong>出资效率</strong>：</p>
+<ul>
+<li>天保基建认购：需经董事会审议，预计 2-3 个月</li>
+<li>天保控股认购：集团内部审批，预计 1-2 个月</li>
+<li>实际差异有限，建议以战略价值优先——天保基建直接持有更优</li>
+</ul>
+<hr />
+
+</div>
+<blockquote>
+<p>第一篇已从纯市场化角度完成 34% REITs 投资价值分析，结论为「风险收益一般——安全边际存在但超额收益不足」。本篇在此基础之上，引入天保控股体系的多主体协同框架，论证如何通过一揽子合作将「不优不劣」的投资升级为「多方共赢」的战略合作。</p>
+</blockquote>
+<h3 id="auto-h-109-33c772">2.1 战略协同必要性</h3>
+<div class="ascii-figure ascii-flow"><div class="ascii-figure-title">📋 路径流程图（自动转换）</div><div class="chart-wrapper"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" width="100%" style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;background:#f7fafc;border:1px solid #e2e8f0;border-radius:6px;margin:12px 0;display:block;height:auto"><rect x="30" y="14" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="32.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">核心矛盾:</text><line x1="390.0" y1="42" x2="390.0" y2="51" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,51 393.5,51 390.0,55" fill="#1a365d"/><rect x="30" y="54" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="72.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">汇天需要: 34% 资金来源（14.76-16.23 亿）+ REITs 估值提升 + 国企信用背书</text><line x1="390.0" y1="82" x2="390.0" y2="91" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,91 393.5,91 390.0,95" fill="#1a365d"/><rect x="30" y="94" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="112.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">天保需要: 解决基建 10 亿减值 + 能源转型 IDC 运营商</text><line x1="390.0" y1="122" x2="390.0" y2="131" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,131 393.5,131 390.0,135" fill="#1a365d"/><rect x="30" y="134" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="152.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">双方共赢点: 资源互换 + 信用共享 + 价值叠加</text><line x1="390.0" y1="162" x2="390.0" y2="171" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,171 393.5,171 390.0,175" fill="#1a365d"/><rect x="30" y="174" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="192.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">解法:</text><line x1="390.0" y1="202" x2="390.0" y2="211" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,211 393.5,211 390.0,215" fill="#1a365d"/><rect x="30" y="214" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="232.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">汇天获得: 34% 资金问题 + 国企信用增信</text><line x1="390.0" y1="242" x2="390.0" y2="251" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,251 393.5,251 390.0,255" fill="#1a365d"/><rect x="30" y="254" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="272.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">REITs 估值提升</text><line x1="390.0" y1="282" x2="390.0" y2="291" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,291 393.5,291 390.0,295" fill="#1a365d"/><rect x="30" y="294" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="312.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">发行成功</text><line x1="390.0" y1="322" x2="390.0" y2="331" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,331 393.5,331 390.0,335" fill="#1a365d"/><rect x="30" y="334" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="352.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">天保获得: 解决基建减值 + 能源港股转型</text><line x1="390.0" y1="362" x2="390.0" y2="371" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,371 393.5,371 390.0,375" fill="#1a365d"/><rect x="30" y="374" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="392.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">上市公司估值切换</text></svg></div></div>
+<p>纯市场化分析的结论是 IRR 5.00% &lt; WACC 5.5%，无法覆盖资金成本。战略协同的意义在于通过多主体资源互换，额外创造 1-2pp 的价值提升——国企信用增信降低 REITs 发行难度、运管协同改善运营效率、综合金融服务解决短期资金、GPU 租赁承担重资产压力——使整体回报超过门槛。</p>
+<h3 id="auto-h-110-e08f15">2.2 总体方案设计</h3>
+<p><strong>五方协同（天保基建 + 天保能源 + 新兴科技 + 其他综合金融 + 汇天）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>主体</th>
+<th>任务</th>
+<th>对汇天价值</th>
+<th>对天保价值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>REITs 投资人+基建转型</strong></td>
+<td>天保基建（或控股体系其他方）</td>
+<td>认购 34% 份额 + 解决 10 亿减值</td>
+<td>解决 14.76-16.23 亿资金缺口</td>
+<td>化解减值 + 估值切换</td>
+</tr>
+<tr>
+<td><strong>运管+绿电+港股转型</strong></td>
+<td>天保能源</td>
+<td>运管统筹 + 绿电供应 + 储能合作</td>
+<td>提升运营效率 + 绿电指标</td>
+<td>港股双主业故事 + 估值提升 30%+</td>
+</tr>
+<tr>
+<td><strong>重资产承担</strong></td>
+<td>新兴科技</td>
+<td>GPU 经营租赁（千卡级）</td>
+<td>承担 GPU 硬件重资产</td>
+<td>设备融租收益</td>
+</tr>
+<tr>
+<td><strong>综合金融</strong></td>
+<td>租赁+小贷+银行+信托+保险</td>
+<td>过桥+设备回租+市场化投资</td>
+<td>解决短期资金+多元化投资人</td>
+<td>辅助收益</td>
+</tr>
+<tr>
+<td><strong>REITs 标的</strong></td>
+<td>汇天网络</td>
+<td>34% REITs 装入</td>
+<td>获得 14.76-16.23 亿资金</td>
+<td>战略合作落地</td>
+</tr>
+</tbody>
+</table>
+<div class="ascii-figure ascii-flow"><div class="ascii-figure-title">📋 路径流程图（自动转换）</div><div class="chart-wrapper"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 350" width="100%" style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;background:#f7fafc;border:1px solid #e2e8f0;border-radius:6px;margin:12px 0;display:block;height:auto"><rect x="30" y="14" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="32.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│   天保控股（统筹）     │</text><line x1="390.0" y1="42" x2="390.0" y2="51" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,51 393.5,51 390.0,55" fill="#1a365d"/><rect x="30" y="54" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="72.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│天保基建│ │天保能源│     │新兴科技│     │其他公司│ │ 汇天   │</text><line x1="390.0" y1="82" x2="390.0" y2="91" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,91 393.5,91 390.0,95" fill="#1a365d"/><rect x="30" y="94" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="112.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│  REITs │ │  运管  │     │GPU租赁 │     │综合金融│ │ 网络  │</text><line x1="390.0" y1="122" x2="390.0" y2="131" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,131 393.5,131 390.0,135" fill="#1a365d"/><rect x="30" y="134" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="152.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│ + 减值 │ │+绿电  │     │        │     │        │ │       │</text><line x1="390.0" y1="162" x2="390.0" y2="171" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,171 393.5,171 390.0,175" fill="#1a365d"/><rect x="30" y="174" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="192.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│ 机构间 REITs │</text><line x1="390.0" y1="202" x2="390.0" y2="211" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,211 393.5,211 390.0,215" fill="#1a365d"/><rect x="30" y="214" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="232.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│ (43.4 亿)   │</text><line x1="390.0" y1="242" x2="390.0" y2="251" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,251 393.5,251 390.0,255" fill="#1a365d"/><rect x="30" y="254" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="272.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│  资本市场    │</text><line x1="390.0" y1="282" x2="390.0" y2="291" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,291 393.5,291 390.0,295" fill="#1a365d"/><rect x="30" y="294" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="312.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">│ 投资人群体   │</text></svg></div></div>
+<h3 id="auto-h-111-5df150">2.3 关键命题拆解</h3>
+<p><strong>核心命题</strong>：</p>
+<ol>
+<li><strong>天保控股体系协助汇天解决 不低于34% REITs 资金来源</strong></li>
+<li><strong>增加国企信用让 REITs 更具市场吸引力，提高估值</strong></li>
+<li><strong>协调新兴科技+其他公司进行一揽子配合</strong></li>
+<li><strong>帮天保体系解决天保基建（10亿减值）和天保能源（港股转型）的问题</strong></li>
+</ol>
+<h3 id="auto-h-112-7e39b3">2.4 34% 投资主体选择：天保基建 vs 天保控股</h3>
+<p><strong>关键问题</strong>：34% REITs 份额由天保基建（上市公司）还是天保控股（集团）持有？</p>
+<table>
+<thead>
+<tr>
+<th>方案</th>
+<th>主体</th>
+<th>优势</th>
+<th>劣势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>天保基建</td>
+<td>上市公司直接持有，信息披露透明，资本市场故事清晰</td>
+<td>并表时需与交易所预沟通主营业务连续性</td>
+</tr>
+<tr>
+<td>B</td>
+<td>天保控股</td>
+<td>审批流程简单，不受上市公司监管约束，出资灵活</td>
+<td>不直接体现在上市公司报表</td>
+</tr>
+<tr>
+<td><strong>推荐</strong></td>
+<td><strong>天保基建</strong></td>
+<td>上市公司持有 REITs 份额有利于构建&quot;AI 算力基础设施&quot;资本市场故事，34% 出资可纳入长期股权投资</td>
+<td>并表时需与交易所预沟通主营业务连续性</td>
+</tr>
+</tbody>
+</table>
+<p><strong>出资效率</strong>：</p>
+<ul>
+<li>天保基建认购：需经董事会审议，预计 2-3 个月</li>
+<li>天保控股认购：集团内部审批，预计 1-2 个月</li>
+<li>实际差异有限，建议以战略价值优先——天保基建直接持有更优</li>
+</ul>
+<hr />
+<h2 id="auto-h-3-32e161">第三篇 五个专项的核心作用</h2>
+<h3 id="auto-h-113-68f7a6">3.1 专项一：天保基建（10亿减值化解 + REITs 认购）-相见报告01-天保基建专项-减值处理与业务转型</h3>
+<p><strong>战略意图</strong>：对天保有利，化解 10 亿减值 + 转型新基建</p>
+<p><strong>核心操作</strong>（详见 01 专项，等值互换模式 V2）：</p>
+<p>天保基建（出）                              汇天网络（出）
+────────────                                ────────────
+生态城项目（账面24亿）                        IDC资产（真实估值28亿）
+└─ 真实估值：14亿                           └─ 交易价：38亿
+└─ 减值：10亿（未计提）                     └─ 含REITs扩募资格</p>
+<p>综保区17万㎡产业园中的一部分（账面14亿）<br />
+└─ 真实估值：14亿<br />
+└─ 现状：空置/低效</p>
+<pre><code>    ─────────── 等值互换 ───────────
+    双方真实估值：28亿 = 28亿（对等）
+    交易价格：38亿 = 38亿（账面不亏损）
+</code></pre>
+<div class="ascii-figure ascii-flow"><div class="ascii-figure-title">📋 路径流程图（自动转换）</div><div class="chart-wrapper"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 1550" width="100%" style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;background:#f7fafc;border:1px solid #e2e8f0;border-radius:6px;margin:12px 0;display:block;height:auto"><rect x="30" y="14" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="32.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">**对汇天价值**：</text><line x1="390.0" y1="42" x2="390.0" y2="51" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,51 393.5,51 390.0,55" fill="#1a365d"/><rect x="30" y="54" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="72.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 解决 34% 资金来源（14.76-16.23 亿）</text><line x1="390.0" y1="82" x2="390.0" y2="91" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,91 393.5,91 390.0,95" fill="#1a365d"/><rect x="30" y="94" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="112.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 国企信用增信：上市公司认购降低市场风险认知</text><line x1="390.0" y1="122" x2="390.0" y2="131" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,131 393.5,131 390.0,135" fill="#1a365d"/><rect x="30" y="134" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="152.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 等值互换获得产业园（14 亿真实估值）+ 天保基建协助直接变现 14 亿元现金（协助商业地产销售）</text><line x1="390.0" y1="162" x2="390.0" y2="171" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,171 393.5,171 390.0,175" fill="#1a365d"/><rect x="30" y="174" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="192.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">**对天保价值**：</text><line x1="390.0" y1="202" x2="390.0" y2="211" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,211 393.5,211 390.0,215" fill="#1a365d"/><rect x="30" y="214" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="232.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 化解 10 亿减值（账面不亏损）</text><line x1="390.0" y1="242" x2="390.0" y2="251" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,251 393.5,251 390.0,255" fill="#1a365d"/><rect x="30" y="254" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="272.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 获得 IDC 运营权（REITs 扩募后估值切换）</text><line x1="390.0" y1="282" x2="390.0" y2="291" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,291 393.5,291 390.0,295" fill="#1a365d"/><rect x="30" y="294" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="312.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 业务转型：地产</text><line x1="390.0" y1="322" x2="390.0" y2="331" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,331 393.5,331 390.0,335" fill="#1a365d"/><rect x="30" y="334" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="352.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">AI 算力基础设施</text><line x1="390.0" y1="362" x2="390.0" y2="371" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,371 393.5,371 390.0,375" fill="#1a365d"/><rect x="30" y="374" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="392.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">### 3.2 专项二：天保能源（运管统筹 + 港股转型）-相见报告02-天保能源专项-运管统筹与港股转型</text><line x1="390.0" y1="402" x2="390.0" y2="411" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,411 393.5,411 390.0,415" fill="#1a365d"/><rect x="30" y="414" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="432.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">**战略意图**：对天保有利，转型 IDC 运营商</text><line x1="390.0" y1="442" x2="390.0" y2="451" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,451 393.5,451 390.0,455" fill="#1a365d"/><rect x="30" y="454" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="472.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">**核心操作**（详见 02 专项）：</text><line x1="390.0" y1="482" x2="390.0" y2="491" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,491 393.5,491 390.0,495" fill="#1a365d"/><rect x="30" y="494" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="512.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 维度 | 现状 | 转型目标 |</text><line x1="390.0" y1="522" x2="390.0" y2="531" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,531 393.5,531 390.0,535" fill="#1a365d"/><rect x="30" y="534" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="552.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">|------|------|----------|</text><line x1="390.0" y1="562" x2="390.0" y2="571" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,571 393.5,571 390.0,575" fill="#1a365d"/><rect x="30" y="574" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="592.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 定位 | 区域能源供应商 | 算力基础设施综合服务商 |</text><line x1="390.0" y1="602" x2="390.0" y2="611" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,611 393.5,611 390.0,615" fill="#1a365d"/><rect x="30" y="614" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="632.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 业务 | 售电+供热 | 能源+数据中心运营+绿电 |</text><line x1="390.0" y1="642" x2="390.0" y2="651" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,651 393.5,651 390.0,655" fill="#1a365d"/><rect x="30" y="654" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="672.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 估值 PE | 8-12x（港股能源） | 15-20x（IDC 运营） |</text><line x1="390.0" y1="682" x2="390.0" y2="691" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,691 393.5,691 390.0,695" fill="#1a365d"/><rect x="30" y="694" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="712.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 市值 | 较小 | 提升 50-100% |</text><line x1="390.0" y1="722" x2="390.0" y2="731" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,731 393.5,731 390.0,735" fill="#1a365d"/><rect x="30" y="734" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="752.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">**运管能力建设路径**：</text><line x1="390.0" y1="762" x2="390.0" y2="771" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,771 393.5,771 390.0,775" fill="#1a365d"/><rect x="30" y="774" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="792.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- Phase 1 (2026-2027)：参股瀚瑞德，观摩学习</text><line x1="390.0" y1="802" x2="390.0" y2="811" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,811 393.5,811 390.0,815" fill="#1a365d"/><rect x="30" y="814" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="832.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- Phase 2 (2027-2028)：联合运管，天保能源</text><line x1="390.0" y1="842" x2="390.0" y2="851" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,851 393.5,851 390.0,855" fill="#1a365d"/><rect x="30" y="854" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="872.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">统筹机构</text><line x1="390.0" y1="882" x2="390.0" y2="891" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,891 393.5,891 390.0,895" fill="#1a365d"/><rect x="30" y="894" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="912.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- Phase 3 (2028-2030)：独立运管，形成品牌</text><line x1="390.0" y1="922" x2="390.0" y2="931" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,931 393.5,931 390.0,935" fill="#1a365d"/><rect x="30" y="934" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="952.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- Phase 4 (2030+)：对外输出</text><line x1="390.0" y1="962" x2="390.0" y2="971" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,971 393.5,971 390.0,975" fill="#1a365d"/><rect x="30" y="974" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="992.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 运管能力提升</text><line x1="390.0" y1="1002" x2="390.0" y2="1011" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1011 393.5,1011 390.0,1015" fill="#1a365d"/><rect x="30" y="1014" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1032.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">运营效率改善</text><line x1="390.0" y1="1042" x2="390.0" y2="1051" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1051 393.5,1051 390.0,1055" fill="#1a365d"/><rect x="30" y="1054" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1072.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 绿电供应（2027 年起 3-5 亿 kWh）</text><line x1="390.0" y1="1082" x2="390.0" y2="1091" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1091 393.5,1091 390.0,1095" fill="#1a365d"/><rect x="30" y="1094" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1112.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">ESG 指标</text><line x1="390.0" y1="1122" x2="390.0" y2="1131" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1131 393.5,1131 390.0,1135" fill="#1a365d"/><rect x="30" y="1134" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1152.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 储能合作（10MW 初期</text><line x1="390.0" y1="1162" x2="390.0" y2="1171" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1171 393.5,1171 390.0,1175" fill="#1a365d"/><rect x="30" y="1174" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1192.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">50MW 远期）</text><line x1="390.0" y1="1202" x2="390.0" y2="1211" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1211 393.5,1211 390.0,1215" fill="#1a365d"/><rect x="30" y="1214" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1232.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">削峰填谷</text><line x1="390.0" y1="1242" x2="390.0" y2="1251" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1251 393.5,1251 390.0,1255" fill="#1a365d"/><rect x="30" y="1254" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1272.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 港股双主业故事：传统能源</text><line x1="390.0" y1="1282" x2="390.0" y2="1291" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1291 393.5,1291 390.0,1295" fill="#1a365d"/><rect x="30" y="1294" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1312.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">AI 算力</text><line x1="390.0" y1="1322" x2="390.0" y2="1331" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1331 393.5,1331 390.0,1335" fill="#1a365d"/><rect x="30" y="1334" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1352.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 估值提升 30-50%</text><line x1="390.0" y1="1362" x2="390.0" y2="1371" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1371 393.5,1371 390.0,1375" fill="#1a365d"/><rect x="30" y="1374" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1392.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 运管费收入（基础 4,100 万 + 激励分成）</text><line x1="390.0" y1="1402" x2="390.0" y2="1411" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1411 393.5,1411 390.0,1415" fill="#1a365d"/><rect x="30" y="1414" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1432.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">### 3.3 专项三：新兴科技（GPU 经营租赁）——相见报告03-新兴科技专项-GPU经营租赁风险分析</text><line x1="390.0" y1="1442" x2="390.0" y2="1451" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1451 393.5,1451 390.0,1455" fill="#1a365d"/><rect x="30" y="1454" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1472.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">**战略意图**：市场化业务机会，帮助对方承担重资产部分</text><line x1="390.0" y1="1482" x2="390.0" y2="1491" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,1491 393.5,1491 390.0,1495" fill="#1a365d"/><rect x="30" y="1494" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="1512.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">**核心操作**（详见 03 专项）：</text></svg></div></div>
+<p>新兴科技（天保旗下）
+│
+├── 采购 NVIDIA B300 GPU 服务器
+│   资金来源: 集团支持 + 融资
+│
+├── 经营租赁给 汇天（或其他算力运营商）
+│   5年闭口合同
+│
+└── 汇天再将算力转租/Token 服务给终端客户</p>
+<pre><code>
+**单卡投资对比**（榆林模型）：
+- B300：307亿/3万卡 ≈ **102万/卡**
+- 国产卡：96亿/5万卡 ≈ **19万/卡**
+- 5090：35亿/5万卡 ≈ **7万/卡**
+
+**对汇天价值**：
+- 解决 GPU 硬件重资产投入问题（千卡级，不占用汇天资产负债表）
+- 5 年闭口合同锁定价格
+
+**对天保价值**：
+- 设备融租收益（B300 静态回收期 3.5 年）
+- 5 年闭口合同 + 残值收益
+- 集团协同业务增量
+
+### 3.4 新兴科技专项风险提示（专项风险提示要求）
+
+**B300 黑市价格问题专项揭示**：
+
+#### 🔴 风险一：B300 黑市价格与监管风险（最大不确定性）
+
+**核心矛盾**：
+</code></pre>
+<p>B300 美国出口管制状态:</p>
+<ul>
+<li>B300 性能密度远超 BIS 阈值 → 极大概率被禁</li>
+<li>若 B300 被禁 → 需依赖黑市/灰色渠道</li>
+</ul>
+<p>后果链:
+黑市供应 → 价格波动 → 监管风险（次级制裁）→ 项目可持续性</p>
+<div class="ascii-figure ascii-flow"><div class="ascii-figure-title">📋 路径流程图（自动转换）</div><div class="chart-wrapper"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 1030" width="100%" style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;background:#f7fafc;border:1px solid #e2e8f0;border-radius:6px;margin:12px 0;display:block;height:auto"><rect x="30" y="14" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="32.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">**当前黑市价格**（行业调研估算）：</text><line x1="390.0" y1="42" x2="390.0" y2="51" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,51 393.5,51 390.0,55" fill="#1a365d"/><rect x="30" y="54" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="72.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 渠道 | B300 单卡价格 | 与官方价差 | 风险等级 |</text><line x1="390.0" y1="82" x2="390.0" y2="91" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,91 393.5,91 390.0,95" fill="#1a365d"/><rect x="30" y="94" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="112.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">|------|------------|----------|---------|</text><line x1="390.0" y1="122" x2="390.0" y2="131" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,131 393.5,131 390.0,135" fill="#1a365d"/><rect x="30" y="134" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="152.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 官方渠道 | 102万/卡（含服务器） | — | 🟢 合规无风险 |</text><line x1="390.0" y1="162" x2="390.0" y2="171" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,171 393.5,171 390.0,175" fill="#1a365d"/><rect x="30" y="174" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="192.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 灰色渠道 | 130-160万/卡 | +28-57% | 🟡 中等风险 |</text><line x1="390.0" y1="202" x2="390.0" y2="211" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,211 393.5,211 390.0,215" fill="#1a365d"/><rect x="30" y="214" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="232.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 黑市渠道 | 180-250万/卡 | +76-145% | 🔴 高风险 |</text><line x1="390.0" y1="242" x2="390.0" y2="251" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,251 393.5,251 390.0,255" fill="#1a365d"/><rect x="30" y="254" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="272.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">**监管风险**：</text><line x1="390.0" y1="282" x2="390.0" y2="291" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,291 393.5,291 390.0,295" fill="#1a365d"/><rect x="30" y="294" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="312.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 美国次级制裁风险：使用黑市芯片可能触发美国对中国实体的次级制裁</text><line x1="390.0" y1="322" x2="390.0" y2="331" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,331 393.5,331 390.0,335" fill="#1a365d"/><rect x="30" y="334" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="352.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 中国监管态度：国家不鼓励企业规避出口管制，可能影响未来政策支持</text><line x1="390.0" y1="362" x2="390.0" y2="371" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,371 393.5,371 390.0,375" fill="#1a365d"/><rect x="30" y="374" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="392.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 资产冻结风险：极端情况下黑市采购的设备可能被认定为&quot;违法所得&quot;</text><line x1="390.0" y1="402" x2="390.0" y2="411" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,411 393.5,411 390.0,415" fill="#1a365d"/><rect x="30" y="414" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="432.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">**若监管放开情景**：</text><line x1="390.0" y1="442" x2="390.0" y2="451" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,451 393.5,451 390.0,455" fill="#1a365d"/><rect x="30" y="454" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="472.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 官方渠道供应恢复</text><line x1="390.0" y1="482" x2="390.0" y2="491" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,491 393.5,491 390.0,495" fill="#1a365d"/><rect x="30" y="494" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="512.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">B300 价格回归至 100-120万/卡</text><line x1="390.0" y1="522" x2="390.0" y2="531" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,531 393.5,531 390.0,535" fill="#1a365d"/><rect x="30" y="534" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="552.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 黑市溢价消失</text><line x1="390.0" y1="562" x2="390.0" y2="571" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,571 393.5,571 390.0,575" fill="#1a365d"/><rect x="30" y="574" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="592.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">国产替代压力减小</text><line x1="390.0" y1="602" x2="390.0" y2="611" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,611 393.5,611 390.0,615" fill="#1a365d"/><rect x="30" y="614" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="632.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">- 整体市场回归正常</text><line x1="390.0" y1="642" x2="390.0" y2="651" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,651 393.5,651 390.0,655" fill="#1a365d"/><rect x="30" y="654" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="672.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">**缓释措施**：</text><line x1="390.0" y1="682" x2="390.0" y2="691" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,691 393.5,691 390.0,695" fill="#1a365d"/><rect x="30" y="694" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="712.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 措施 | 可行性 | 说明 |</text><line x1="390.0" y1="722" x2="390.0" y2="731" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,731 393.5,731 390.0,735" fill="#1a365d"/><rect x="30" y="734" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="752.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">|------|--------|------|</text><line x1="390.0" y1="762" x2="390.0" y2="771" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,771 393.5,771 390.0,775" fill="#1a365d"/><rect x="30" y="774" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="792.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 优先官方渠道 | ✅ | 采购前确认 BIS 出口许可证 |</text><line x1="390.0" y1="802" x2="390.0" y2="811" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,811 393.5,811 390.0,815" fill="#1a365d"/><rect x="30" y="814" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="832.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 合同中加入「制裁退出」条款 | ✅ | 若被制裁无法交付, 卖方全额退款 |</text><line x1="390.0" y1="842" x2="390.0" y2="851" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,851 393.5,851 390.0,855" fill="#1a365d"/><rect x="30" y="854" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="872.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 关注 NVIDIA 中国特供版 B20 | ✅ | 作为 B300 被禁的替代方案 |</text><line x1="390.0" y1="882" x2="390.0" y2="891" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,891 393.5,891 390.0,895" fill="#1a365d"/><rect x="30" y="894" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="912.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 混合采购（B300+国产+5090）| ✅ | 分散供应商风险 |</text><line x1="390.0" y1="922" x2="390.0" y2="931" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,931 393.5,931 390.0,935" fill="#1a365d"/><rect x="30" y="934" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="952.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">| 避免黑市渠道 | ✅ | 即使成本高 30-50%，合规优先 |</text><line x1="390.0" y1="962" x2="390.0" y2="971" stroke="#1a365d" stroke-width="1.5"/><polygon points="386.5,971 393.5,971 390.0,975" fill="#1a365d"/><rect x="30" y="974" width="720" height="28" rx="4" fill="#edf2f7" stroke="#1a365d" stroke-width="1.2"/><text x="390.0" y="992.0" text-anchor="middle" font-size="13" fill="#1a365d" font-weight="500">#### 🟡 风险二：硬件迭代残值崩跌</text></svg></div></div>
+<p>B300 → 2031 年残值 ≈ 5-15万/卡（5-15% 原值）
+5 年合同期回收: 145万(租金) + 5-15万(残值) = 150-160万/卡
+投入 102万 → 利润 48-58万/卡（5年）
+→ 残值影响有限，但合同提前终止时损失放大</p>
+<pre><code>
+#### 🟡 风险三：Token 价格持续下行
+
+</code></pre>
+<p>传导链:
+Token 价格 ↓ → AI 应用公司推理成本 ↓ → 算力服务商营收 ↓
+→ GPU 租赁价格下行压力</p>
+<p>缓冲: 5 年闭口合同锁定价格
+风险点: 合同到期后能否续约/找到新客户</p>
+<pre><code>
+#### 🟡 风险四：算力产能过剩
+
+</code></pre>
+<p>2024-2026 智算中心建设潮: 100+ 个
+信号: 京东自建从汇天撤出 → 大厂倾向自建
+对新兴科技: 中低端推理算力价格压力大</p>
+<pre><code>
+#### 🟡 风险五：大模型技术路线变化
+
+</code></pre>
+<p>潜在冲击:</p>
+<ul>
+<li>Dense → MoE: 推理需求变化</li>
+<li>推理优化突破: 单位 Token 算力需求下降</li>
+<li>小模型性能追赶: 不需要最大集群</li>
+<li>端侧推理替代: 训练需求 &gt; 推理需求</li>
+<li>新架构替代 Transformer: 旧卡不兼容</li>
+</ul>
+<p>最差情景: 5 年后 B300 残值趋近于零</p>
+<div class="ascii-figure ascii-treemap"><div class="ascii-figure-title">📊 控股 / 持股 / 比例分布（自动 Treemap）</div><div class="ascii-treemap-bar"><div class="ascii-treemap-cell" style="width:16.00%;background:#1a365d;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">40.0%</div><div class="ascii-treemap-name" style="color:#fff">| 美国出口管制 + 黑市价格 | 🔴 极高 | 中高 | 低 | ★★★★★ |</div></div><div class="ascii-treemap-cell" style="width:32.00%;background:#2c5282;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">80.0%</div><div class="ascii-treemap-name" style="color:#fff">| 硬件迭代残值崩跌 | 🔴 高 | 高 | 中 | ★★★★ |</div></div><div class="ascii-treemap-cell" style="width:32.00%;background:#d69e2e;color:#1a202c"><div class="ascii-treemap-pct" style="color:#1a202c">80.0%</div><div class="ascii-treemap-name" style="color:#1a202c">| Token 价格下行 | 🟡 中 | 高 | 高 | ★★★ |</div></div><div class="ascii-treemap-cell" style="width:12.00%;background:#2f855a;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">30.0%</div><div class="ascii-treemap-name" style="color:#fff">| 算力产能过剩 | 🟡 中 | 中 | 中 | ★★★ |</div></div><div class="ascii-treemap-cell" style="width:8.00%;background:#718096;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">20.0%</div><div class="ascii-treemap-name" style="color:#fff">| 技术路线变化 | 🟡 中 | 中 | 低 | ★★★ |</div></div></div></div>
+<p>天保小贷: 2亿（公司权限内, 3 天放款）
+天保租赁: 3亿（公司权限内）
+合计: 5亿 → 覆盖京能退出需求</p>
+<pre><code>
+**对汇天价值**：
+- 短期过桥（5 亿，3 天放款）
+- 设备回租（REITs 发行后）
+- 多元化投资人基础
+
+**对天保价值**：
+- 天保小贷年化 29% 过桥费
+- 设备融租收益
+- 集团协同业务
+
+---
+
+## 第四篇 一揽子合作综合价值
+
+### 4.1 价值叠加分析
+
+</code></pre>
+<p>纯市场化 34% 投资价值:
+基准 IRR = 5.00%
+悲观 IRR = 3.94%
+→ &quot;风险收益一般&quot;</p>
+<ul>
+<li>一揽子协同价值:
+<ul>
+<li>基建化解 10 亿减值 → 集团估值提升</li>
+<li>能源港股转型 → 港股估值提升 30-50%</li>
+<li>GPU 租赁重资产承担（千卡级）→ 缓解硬件设备资金压力</li>
+<li>综合金融服务 → 5 亿过桥+ 多元化投资人</li>
+<li>国企信用增信 → REITs 估值溢价 3-5%</li>
+<li>扩募通道 → 后续 80-120 亿估值潜力</li>
+</ul>
+</li>
+</ul>
+<p>= 协同后综合价值:
+基准 IRR 提升至 7-9%
+悲观 IRR 提升至 5-7%
+→ &quot;风险收益良好&quot;</p>
+<div class="ascii-figure ascii-treemap"><div class="ascii-figure-title">📊 控股 / 持股 / 比例分布（自动 Treemap）</div><div class="ascii-treemap-bar"><div class="ascii-treemap-cell" style="width:18.79%;background:#1a365d;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">34.0%</div><div class="ascii-treemap-name" style="color:#fff">| 维度 | 纯市场化 34% | 一揽子协同 34% | 提升幅度 |</div></div><div class="ascii-treemap-cell" style="width:2.76%;background:#2c5282;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">5.0%</div><div class="ascii-treemap-name" style="color:#fff">| 基准 IRR | 5.00% | 7-9% | +2-4pp |</div></div><div class="ascii-treemap-cell" style="width:2.18%;background:#d69e2e;color:#1a202c"><div class="ascii-treemap-pct" style="color:#1a202c">3.9%</div><div class="ascii-treemap-name" style="color:#1a202c">| 悲观 IRR | 3.94% | 5-7% | +1-3pp |</div></div><div class="ascii-treemap-cell" style="width:18.79%;background:#2f855a;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">34.0%</div><div class="ascii-treemap-name" style="color:#fff">| 解决 34% REITs 资金来源 | 确定并购主体以及并购融资贷款来源|</div></div><div class="ascii-treemap-cell" style="width:5.53%;background:#718096;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">10.0%</div><div class="ascii-treemap-name" style="color:#fff">| 国企信用增信 | +10% 估值 | 估值溢价 | 集团协同 |</div></div><div class="ascii-treemap-cell" style="width:16.58%;background:#c53030;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">30.0%</div><div class="ascii-treemap-name" style="color:#fff">| 天保能源 | 运管费 + 港股估值提升 30-50% + 绿电服务 | 估值切换 |</div></div><div class="ascii-treemap-cell" style="width:16.58%;background:#1a365d;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">30.0%</div><div class="ascii-treemap-name" style="color:#fff">| 新兴科技 | GPU 租赁利润 30-40% | 高回报/高风险 |</div></div><div class="ascii-treemap-cell" style="width:18.79%;background:#2c5282;color:#fff"><div class="ascii-treemap-pct" style="color:#fff">34.0%</div><div class="ascii-treemap-name" style="color:#fff">一揽子协同使 34% 投资从&quot;风险收益一般&quot;提升至&quot;风险收益良好&quot;。</div></div></div></div>
+
+<script>
+/* ===== enhance_report: 浮动侧边栏切换（V3.43.3: 增强外部点击关闭） ===== */
+(function(){
+  /* 给已有 toggle 按钮附加「点击外部关闭」功能 */
+  function enhanceExistingToggle(btnSel, targetSel){
+    var btn = document.querySelector(btnSel);
+    var target = document.querySelector(targetSel);
+    if (!btn || !target) return;
+    if (btn.dataset.enhanced === '1') return;
+    btn.dataset.enhanced = '1';
+    // 包装原 onclick：点击切换 + 自动关闭其它侧栏
+    var origOnClick = btn.onclick;
+    btn.onclick = function(e){
+      // V14.0 FIX: 防御 e 为 undefined（直接调用 onclick() 测试场景）
+      if (e && e.stopPropagation) e.stopPropagation();
+      if (origOnClick) origOnClick.call(this, e);
+      // 关闭对侧
+      var isToc = btnSel.indexOf('toc') >= 0;
+      var otherSel = isToc ? '.key-conclusion' : '.toc-sidebar';
+      var otherBtnSel = isToc ? '.key-conclusion-toggle' : '.toc-sidebar-toggle';
+      var other = document.querySelector(otherSel);
+      var otherBtn = document.querySelector(otherBtnSel);
+      if (other && other.classList.contains('open')){
+        other.classList.remove('open');
+        if (otherBtn) otherBtn.innerHTML = otherBtn.dataset.origLabel || otherBtn.innerHTML.replace('✕ 关闭','').trim() || '📑 目录';
+      }
+    };
+    // 记录原始 label
+    if (!btn.dataset.origLabel) btn.dataset.origLabel = btn.innerHTML.replace('✕ 关闭','').trim();
+    // 点击侧栏外部关闭 + body padding 避让
+    document.addEventListener('click', function(e){
+      if (!target.classList.contains('open')) return;
+      if (target.contains(e.target) || btn.contains(e.target)) return;
+      target.classList.remove('open');
+      btn.innerHTML = btn.dataset.origLabel || btn.innerHTML;
+    });
+    // 监听 open 状态变化 → 调整 body padding 避免遮挡
+    var isToc = btnSel.indexOf('toc') >= 0;
+    var observer = new MutationObserver(function(){
+      var open = target.classList.contains('open');
+      var otherOpen = document.querySelector((isToc ? '.key-conclusion' : '.toc-sidebar')).classList.contains('open');
+      if (open && !otherOpen){
+        if (isToc) document.body.style.paddingLeft = '260px';
+        else document.body.style.paddingRight = '280px';
+      } else if (!open && !otherOpen){
+        document.body.style.paddingLeft = '';
+        document.body.style.paddingRight = '';
+      } else if (open && otherOpen){
+        // 两个都打开：双向避让
+        document.body.style.paddingLeft = '260px';
+        document.body.style.paddingRight = '280px';
+      }
+    });
+    observer.observe(target, {attributes: true, attributeFilter: ['class']});
+    // ESC 键关闭
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && target.classList.contains('open')){
+        target.classList.remove('open');
+        btn.innerHTML = btn.dataset.origLabel || btn.innerHTML;
+      }
+    });
+  }
+  function makeToggle(targetSel, btnId, label){
+    if (document.querySelector('.' + btnId)) {
+      enhanceExistingToggle('.' + btnId, targetSel);
+      return;
+    }
+    var target = document.querySelector(targetSel);
+    if (!target) return;
+    var btn = document.createElement('button');
+    btn.className = btnId;
+    btn.innerHTML = label;
+    btn.setAttribute('aria-label', '切换' + label);
+    btn.dataset.origLabel = label;
+    btn.onclick = function(){
+      target.classList.toggle('open');
+      btn.innerHTML = target.classList.contains('open') ? '✕ 关闭' : label;
+    };
+    document.body.appendChild(btn);
+    enhanceExistingToggle('.' + btnId, targetSel);
+  }
+  if (document.querySelector('.toc-sidebar')) makeToggle('.toc-sidebar', 'toc-sidebar-toggle', '📑 目录');
+  if (document.querySelector('.key-conclusion')) makeToggle('.key-conclusion', 'key-conclusion-toggle', '⭐ 关键结论');
+})();
+</script><script>
+/* ===== enhance_report: 深色模式切换（V12.0 新增） ===== */
+(function(){
+  // 1) 注入按钮（若 HTML 中尚无）
+  if (!document.getElementById('dark-mode-toggle')) {
+    var btn = document.createElement('button');
+    btn.id = 'dark-mode-toggle';
+    btn.className = 'theme-toggle-btn';
+    btn.title = '切换深色模式';
+    btn.setAttribute('aria-label', '切换深色模式');
+    btn.textContent = '🌙';
+    document.body.appendChild(btn);
+  }
+  // 2) 启动时恢复 localStorage 状态
+  try {
+    if (localStorage.getItem('dark-mode') === '1') {
+      document.body.classList.add('dark-mode');
+      var b0 = document.getElementById('dark-mode-toggle');
+      if (b0) b0.textContent = '☀️';
+    }
+  } catch(e) {}
+  // 3) 点击切换
+  var darkBtn = document.getElementById('dark-mode-toggle');
+  if (darkBtn) {
+    darkBtn.addEventListener('click', function(){
+      document.body.classList.toggle('dark-mode');
+      var isDark = document.body.classList.contains('dark-mode');
+      darkBtn.textContent = isDark ? '☀️' : '🌙';
+      try { localStorage.setItem('dark-mode', isDark ? '1' : '0'); } catch(e) {}
+    });
+  }
+})();
+</script></body>
+</html>
