@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>02-天保能源专项-运管统筹与港股转型</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:#1a202c;background:#fff;line-height:1.9;font-size:19px;max-width:1000px;margin:0 auto;padding:20px}
+h1{font-size:30px;color:#1a365d;margin:28px 0 16px;border-bottom:3px solid #d69e2e;padding-bottom:12px;font-weight:700}
+h2{font-size:26px;color:#1a365d;margin:30px 0 16px;font-weight:700}
+h3{font-size:22px;color:#2d3748;margin:24px 0 12px;font-weight:600}
+h4{font-size:20px;color:#2d3748;margin:20px 0 10px;font-weight:600}
+p{margin-bottom:14px;font-size:19px}
+strong{color:#1a365d}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:17px}
+th{background:#1a365d;color:#fff;padding:12px 16px;text-align:left;font-size:17px}
+td{padding:11px 16px;border-bottom:1px solid #e2e8f0;font-size:17px}
+tr:hover td{background:#edf2f7}
+blockquote{background:linear-gradient(135deg,#fef9e7,#fef3c7);border-left:4px solid #d69e2e;padding:16px 20px;margin:18px 0;border-radius:0 8px 8px 0;color:#744210;font-size:18px;font-weight:500}
+.nav{background:#1a365d;padding:16px 20px;margin:-20px -20px 28px;border-radius:0 0 8px 8px}
+.nav a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:15px;margin-right:16px}
+ul,ol{margin:14px 0 14px 28px}
+li{margin-bottom:8px;font-size:19px}
+code{background:#f7fafc;padding:3px 8px;border-radius:4px;font-size:17px}
+pre{background:#1a202c;color:#e2e8f0;padding:18px;border-radius:8px;margin:18px 0;overflow-x:auto}
+pre code{background:none;color:inherit;font-size:16px}
+/* 折叠样式 */
+details{margin:16px 0;border:1px solid #e2e8f0;border-radius:8px;overflow:hidden}
+details summary{padding:14px 18px;background:#f7fafc;cursor:pointer;font-weight:600;color:#1a365d;font-size:17px;user-select:none}
+details summary{display:list-item;list-style-type:disclosure-closed}
+details[open] summary{list-style-type:disclosure-open}
+details[open] summary::before{transform:rotate(90deg)}
+details summary:hover{background:#edf2f7}
+details .detail-content{padding:18px;background:#fff}
+/* 链接样式 */
+a{color:#3182ce;text-decoration:none}
+a:hover{color:#1a365d;text-decoration:underline}
+/* 附件链接样式 */
+.appendix-link{display:inline-block;background:#1a365d;color:#fff;padding:6px 14px;border-radius:6px;font-size:15px;margin:4px 4px 4px 0;text-decoration:none}
+.appendix-link:hover{background:#2d3748;color:#fff;text-decoration:none}
+
+/* ===== enhance_report: 浮动侧边栏（默认收起）V14.0 重大修复 ===== */
+/* ⚠️ FIX V14.0: 必须用 position:fixed，否则 transform 偏移会依赖文档流造成布局错乱 */
+.toc-sidebar, .key-conclusion{
+  position:fixed !important;top:80px;z-index:90;
+  width:240px;max-height:75vh;overflow-y:auto;
+  padding:14px;border-radius:8px;
+  background:#fff;border:1px solid #e2e8f0;
+  box-shadow:0 4px 16px rgba(0,0,0,0.12);
+  font-size:13px;line-height:1.55;
+  transition:transform 0.3s ease,left 0.3s ease,right 0.3s ease;
+  box-sizing:border-box;
+}
+.toc-sidebar{left:0}
+.key-conclusion{right:0}
+.toc-sidebar:not(.open){transform:translateX(calc(-100% - 20px))}
+.toc-sidebar.open{transform:translateX(10px)}
+.key-conclusion:not(.open){transform:translateX(calc(100% + 20px))}
+.key-conclusion.open{transform:translateX(-10px)}
+.toc-sidebar-toggle, .key-conclusion-toggle{
+  position:fixed;z-index:99;padding:10px 14px;border-radius:8px;
+  cursor:pointer;font-size:13px;font-weight:600;border:none;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  white-space:nowrap;
+}
+.toc-sidebar-toggle{top:120px;left:20px;background:#1a365d;color:#fff}
+.key-conclusion-toggle{top:120px;right:20px;background:linear-gradient(135deg,#fef3c7,#fde68a);border:2px solid #d69e2e;color:#744210}
+/* ⚠️ FIX V15.0: TOC 标题 + 列表完整排版（解决"打开后排版混乱"） */
+.toc-sidebar .toc-title{
+  font-size:14px !important;font-weight:700 !important;
+  color:#1a365d !important;margin:0 0 10px 0 !important;
+  padding-bottom:8px !important;border-bottom:2px solid #1a365d !important;
+  text-align:left !important;line-height:1.4 !important;
+}
+.toc-sidebar .toc-list, .toc-sidebar ul.toc-list{
+  list-style:none !important;margin:0 !important;padding:0 !important;
+  max-height:65vh !important;overflow-y:auto !important;
+}
+.toc-sidebar .toc-list li, .toc-sidebar ul.toc-list > li{
+  margin:0 !important;padding:0 !important;line-height:1.5 !important;
+  border:none !important;
+}
+.toc-sidebar .toc-list a, .toc-sidebar ul.toc-list a{
+  display:block !important;padding:6px 10px !important;
+  color:#1a365d !important;text-decoration:none !important;
+  font-size:13px !important;line-height:1.5 !important;
+  border-radius:4px !important;transition:background 0.15s ease !important;
+  word-break:break-word !important;
+}
+.toc-sidebar .toc-list a:hover, .toc-sidebar ul.toc-list a:hover{
+  background:#f1f5f9 !important;color:#0f172a !important;
+}
+.toc-sidebar .toc-list .toc-h2, .toc-sidebar ul.toc-list > li > a.toc-h2{
+  font-weight:700 !important;font-size:13px !important;
+  color:#1a365d !important;margin-top:6px !important;
+  border-left:3px solid #1a365d !important;
+}
+.toc-sidebar .toc-list .toc-h3, .toc-sidebar ul.toc-list ul > li > a.toc-h3{
+  font-weight:400 !important;font-size:12px !important;
+  color:#475569 !important;padding-left:22px !important;
+  border-left:1px solid #cbd5e1 !important;
+}
+.toc-sidebar .toc-list ul, .toc-sidebar ul.toc-list ul{
+  list-style:none !important;margin:0 !important;padding:0 !important;
+}
+.toc-sidebar::-webkit-scrollbar{width:6px}
+.toc-sidebar::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+.toc-sidebar::-webkit-scrollbar-track{background:#f1f5f9}
+/* Key Conclusion 排版 */
+.key-conclusion .toc-title{
+  font-size:14px !important;font-weight:700 !important;
+  color:#744210 !important;margin:0 0 10px 0 !important;
+  padding-bottom:8px !important;border-bottom:2px solid #d69e2e !important;
+  text-align:left !important;
+}
+.key-conclusion .toc-list, .key-conclusion ul.toc-list{
+  list-style:none !important;margin:0 !important;padding:0 !important;
+}
+.key-conclusion .toc-list li{margin:0 0 8px 0 !important;padding:0 !important;line-height:1.5 !important}
+.key-conclusion .toc-list a{
+  display:block !important;padding:6px 10px !important;
+  color:#744210 !important;text-decoration:none !important;
+  font-size:13px !important;border-radius:4px !important;
+}
+.key-conclusion .toc-list a:hover{background:#fef3c7 !important}
+/* ⚠️ FIX V14.0: 移动端严格按 viewport 计算，不让按钮超出屏外 */
+@media (max-width:768px){
+  .toc-sidebar, .key-conclusion{
+    width:200px !important;max-width:65vw !important;
+    font-size:12px !important;padding:10px !important;
+    top:460px;
+  }
+  .toc-sidebar-toggle, .key-conclusion-toggle{
+    padding:8px 10px !important;font-size:12px !important;
+    top:430px !important;
+  }
+  .toc-sidebar-toggle{left:8px !important}
+  .key-conclusion-toggle{right:8px !important}
+  /* H1 预留顶部空间避免被侧栏按钮遮挡 */
+  body h1{margin-top:80px !important;padding-top:0 !important;font-size:20px !important;line-height:1.3 !important}
+}
+@media (max-width:420px){
+  .toc-sidebar, .key-conclusion{width:160px !important;max-width:55vw !important;font-size:11px !important;top:440px}
+  .toc-sidebar-toggle, .key-conclusion-toggle{top:410px !important}
+  body h1{margin-top:70px !important;font-size:18px !important}
+}
+/* ===== 关键结论 callout ===== */
+.callout-conclusion{background:linear-gradient(135deg,#fffbeb,#fef3c7);
+  border-left:4px solid #d69e2e;padding:18px 22px;margin:24px 0;border-radius:0 8px 8px 0;
+  box-shadow:0 2px 6px rgba(214,158,46,0.1)}
+.callout-conclusion h2, .callout-conclusion h3{
+  color:#744210;border-bottom:2px solid #d69e2e;padding-bottom:8px;margin-top:0}
+.callout-conclusion ul{padding-left:20px}
+
+
+/* ===== enhance_report: 深色模式切换按钮 ===== */
+.theme-toggle-btn{
+  position:fixed;top:20px;right:20px;z-index:999;
+  width:44px;height:44px;border-radius:50%;
+  border:2px solid #d69e2e;background:#fff;
+  font-size:22px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+  transition:transform 0.2s ease,box-shadow 0.2s ease
+}
+.theme-toggle-btn:hover{transform:scale(1.08);box-shadow:0 4px 12px rgba(0,0,0,0.25)}
+body.dark-mode .theme-toggle-btn{background:#1a202c;border-color:#d69e2e}
+/* ===== 移动端适配 ===== */
+@media (max-width:768px){
+  .theme-toggle-btn{width:38px;height:38px;font-size:18px;top:14px;right:14px}
+}
+/* ⚠️ FIX V14.0+V15.0: 深色模式全局覆盖（背景、文字、表格、链接等 + 防色冲突） */
+body.dark-mode{background:#0f172a !important;color:#e2e8f0 !important}
+/* ⚠️ FIX V15.0: 顸底底色重组中、深淺切换（防止主体叠元色元）主调为 #0f172a 深背景 + #e2e8f0 浅文字 */
+body.dark-mode *:not([class*="hljs"]):not(code):not(pre):not(kbd):not(samp){
+  border-color:#334155 !important
+}
+body.dark-mode *:not(.theme-toggle-btn):not(.toc-sidebar-toggle):not(.key-conclusion-toggle){
+  color:inherit !important
+}
+/* TOC / 关键结論侧栏 */
+body.dark-mode .toc-sidebar, body.dark-mode .key-conclusion{
+  background:#1e293b !important;border-color:#334155 !important;color:#e2e8f0 !important
+}
+body.dark-mode .toc-sidebar .toc-title{color:#f1f5f9 !important;border-bottom-color:#fbbf24 !important}
+body.dark-mode .toc-sidebar .toc-list a, body.dark-mode .key-conclusion a{color:#e2e8f0 !important}
+body.dark-mode .toc-sidebar .toc-list a:hover, body.dark-mode .key-conclusion a:hover{color:#fbbf24 !important}
+body.dark-mode .toc-sidebar .toc-list .toc-h2{color:#93c5fd !important;border-left-color:#93c5fd !important}
+body.dark-mode .toc-sidebar .toc-list .toc-h3{color:#cbd5e1 !important}
+body.dark-mode .toc-sidebar::-webkit-scrollbar-thumb{background:#475569}
+body.dark-mode .toc-sidebar::-webkit-scrollbar-track{background:#0f172a}
+body.dark-mode .key-conclusion .toc-title{color:#fbbf24 !important;border-bottom-color:#fbbf24 !important}
+body.dark-mode .key-conclusion .toc-list a{color:#fef3c7 !important}
+body.dark-mode .key-conclusion .toc-list a:hover{background:#78350f !important}
+/* 表格 */
+body.dark-mode table{background:#1e293b !important;color:#e2e8f0 !important;border-color:#334155 !important}
+body.dark-mode table th{
+  background:#334155 !important;color:#f1f5f9 !important;border-color:#475569 !important
+}
+body.dark-mode table td{border-color:#334155 !important;color:#e2e8f0 !important;background:transparent !important}
+body.dark-mode table tr:nth-child(even) td{background:#0f172a !important}
+body.dark-mode table tr:nth-child(odd) td{background:#1e293b !important}
+body.dark-mode table thead{background:#334155 !important;color:#f1f5f9 !important}
+/* 文字层级 */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6{color:#f1f5f9 !important}
+body.dark-mode p, body.dark-mode li, body.dark-mode dd, body.dark-mode dt, body.dark-mode blockquote, body.dark-mode span, body.dark-mode td, body.dark-mode div{color:#e2e8f0 !important}
+body.dark-mode strong, body.dark-mode b{color:#f1f5f9 !important}
+body.dark-mode em, body.dark-mode i{color:#cbd5e1 !important}
+body.dark-mode hr{border-color:#334155 !important;background:#334155 !important}
+/* 链接 */
+body.dark-mode a:not(.toc-h2):not(.toc-h3):not(.toc-list a){color:#93c5fd !important}
+body.dark-mode a:hover:not(.toc-h2):not(.toc-h3){color:#fbbf24 !important}
+/* Callout */
+body.dark-mode .callout-conclusion{
+  background:linear-gradient(135deg,#451a03,#78350f) !important;
+  border-left-color:#fbbf24 !important;color:#fef3c7 !important
+}
+body.dark-mode .callout-conclusion h2, body.dark-mode .callout-conclusion h3{
+  color:#fbbf24 !important;border-bottom-color:#fbbf24 !important
+}
+body.dark-mode .callout-conclusion p, body.dark-mode .callout-conclusion li, body.dark-mode .callout-conclusion span{
+  color:#fef3c7 !important
+}
+body.dark-mode .callout-h{background:#1e293b !important;border-left-color:#fbbf24 !important;color:#e2e8f0 !important}
+body.dark-mode .callout-h h2, body.dark-mode .callout-h h3, body.dark-mode .callout-h h4{color:#fbbf24 !important}
+body.dark-mode .callout-h p, body.dark-mode .callout-h li, body.dark-mode .callout-h span{color:#e2e8f0 !important}
+body.dark-mode .key-conclusion-toggle{
+  background:linear-gradient(135deg,#451a03,#78350f) !important;color:#fef3c7 !important
+}
+/* 图表 */
+body.dark-mode .chart-figure{background:#1e293b !important;border-color:#334155 !important;color:#e2e8f0 !important}
+body.dark-mode .chart-figure svg{filter:invert(0.85) hue-rotate(180deg)}
+body.dark-mode .chart-figure figcaption, body.dark-mode .chart-figure .chart-title{color:#cbd5e1 !important}
+
+/* ============================================================
+   ⚠️ V13.0 图表文字规范化（与正文 17px 视觉对齐，已固化到执行脚本）
+   --------------------------------------------------------------
+   背景：图表 SVG 默认 viewBox="0 0 100" + 实际宽度 ~720px，
+   旧硬编码 font-size="3" 在 viewBox 单位下会被放大到 21.6px，
+   反而比正文 17px 还大——主公多次反馈「图表字体过大」。
+   规则：图表内所有 SVG text 元素按视觉级别统一到 12~16px。
+   auto_chart.py 同步把所有字号替换为 FS_TITLE/FS_SUB/FS_LABEL/
+   FS_AXIS/FS_TICK/FS_BIG/FS_GAUGE_BIG 常量；此处 CSS 是最终像素兜底。
+   ============================================================ */
+.chart-figure svg text{font-size:13px !important; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif !important}
+/* 新 V13.0 常量映射（auto_chart.py 现在生成的图表） */
+.chart-figure svg text[font-size="1.4"]{font-size:11px !important}
+.chart-figure svg text[font-size="1.7"]{font-size:12px !important}
+.chart-figure svg text[font-size="2.0"]{font-size:13px !important}
+.chart-figure svg text[font-size="2.4"]{font-size:14px !important}
+.chart-figure svg text[font-size="3.0"]{font-size:15px !important}
+.chart-figure svg text[font-size="4.2"]{font-size:17px !important}
+.chart-figure svg text[font-size="6.5"]{font-size:19px !important}
+/* ⚠️ 兼容遗留 V12.0 之前硬编码的字号（保证旧报告重新部署后也被矫正） */
+.chart-figure svg text[font-size="2.5"]{font-size:12px !important}
+.chart-figure svg text[font-size="2.8"]{font-size:12px !important}
+.chart-figure svg text[font-size="3"]{font-size:12px !important}
+.chart-figure svg text[font-size="3.2"]{font-size:13px !important}
+.chart-figure svg text[font-size="3.5"]{font-size:13px !important}
+.chart-figure svg text[font-size="4"]{font-size:14px !important}
+.chart-figure svg text[font-size="4.5"]{font-size:15px !important}
+.chart-figure svg text[font-size="5"]{font-size:17px !important}
+.chart-figure svg text[font-size="6"]{font-size:19px !important}
+.chart-figure svg text[font-size="9"]{font-size:24px !important}
+.chart-figure svg text[font-size="16"]{font-size:30px !important}
+/* 段落个人 inline-style 中的黑色、高亮度文字 （主动顶代）*/
+body.dark-mode [style*="color: rgb(0, 0, 0)"], body.dark-mode [style*="color:#000"], body.dark-mode [style*="color: #000"], body.dark-mode [style*="color:#000000"], body.dark-mode [style*="color: black"]{
+  color:#e2e8f0 !important
+}
+body.dark-mode [style*="color: rgb(255, 255, 255)"], body.dark-mode [style*="color:#fff"], body.dark-mode [style*="color: #fff"], body.dark-mode [style*="color:#ffffff"], body.dark-mode [style*="color: white"]{
+  color:#0f172a !important  /* 深色背景下白色字看不见而变虚背景 */
+}
+body.dark-mode [style*="background: rgb(255, 255, 255)"], body.dark-mode [style*="background:#fff"], body.dark-mode [style*="background: #fff"], body.dark-mode [style*="background:#ffffff"], body.dark-mode [style*="background: white"]{
+  background:#1e293b !important  /* 浅底变深底保持内容可见 */
+}
+body.dark-mode .toc-sidebar-toggle{background:#1e293b !important;color:#fbbf24 !important;border:1px solid #fbbf24}
+body.dark-mode .key-conclusion-toggle{color:#fef3c7 !important}
+/* 重要代码块不反转：原始亮底色语义为主 */
+body.dark-mode code, body.dark-mode pre, body.dark-mode kbd, body.dark-mode samp{
+  background:#0b1424 !important;color:#e2e8f0 !important;border-color:#334155 !important
+}
+body.dark-mode pre code{background:transparent !important}
+body.dark-mode blockquote{background:#1e293b !important;border-left-color:#d69e2e !important;color:#cbd5e1 !important}
+
+
+/* === V15.1 ASCII 块转专属图表 === */
+.ascii-figure{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  margin:14px 0;padding:12px;
+  background:#f7fafc;border:1px solid #e2e8f0;border-radius:6px;
+  font-size:14px;
+}
+.ascii-figure-title{
+  font-size:14px;font-weight:700;color:#1a365d;
+  margin-bottom:10px;padding-bottom:6px;
+  border-bottom:1px dashed #cbd5e0;
+}
+.ascii-treemap-bar{
+  display:flex;width:100%;height:54px;
+  border-radius:4px;overflow:hidden;
+  border:1px solid #cbd5e0;
+}
+.ascii-treemap-cell{
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  padding:6px 4px;color:#fff;
+  font-weight:600;text-align:center;
+  border-right:1px solid rgba(255,255,255,0.4);
+  box-sizing:border-box;
+}
+.ascii-treemap-cell:last-child{border-right:none}
+.ascii-treemap-pct{font-size:14px;font-weight:700;line-height:1.2}
+.ascii-treemap-name{font-size:12px;line-height:1.2;margin-top:2px}
+.ascii-bars-list{display:flex;flex-direction:column;gap:8px}
+.ascii-bar-row{
+  display:flex;align-items:center;gap:12px;
+  font-size:13px;color:#2d3748;
+}
+.ascii-bar-label{flex:0 0 320px;line-height:1.4;overflow:hidden;text-overflow:ellipsis}
+.ascii-bar-track{flex:1;height:16px;background:#edf2f7;border-radius:3px;overflow:hidden;border:1px solid #cbd5e0}
+.ascii-bar-fill{height:100%;border-radius:2px;transition:width 0.3s}
+.ascii-tree-list{display:flex;flex-direction:column;gap:4px}
+.ascii-tree-row{padding:4px 0 4px 8px;line-height:1.5;font-size:13px}
+.ascii-tree-l0{font-weight:700;color:#1a365d}
+/* ⚠️ FIX V15.1.7: ASCII 图表深色模式覆盖（主公 2026-07-12 20:07 反馈"控股路径表格深色下字体看不清"） */
+body.dark-mode .ascii-figure{
+  background:#1e293b !important;border-color:#334155 !important;color:#e2e8f0 !important
+}
+body.dark-mode .ascii-figure-title{
+  color:#fbbf24 !important;border-bottom-color:#475569 !important
+}
+body.dark-mode .ascii-bar-row{color:#e2e8f0 !important}
+body.dark-mode .ascii-bar-label{color:#e2e8f0 !important}
+body.dark-mode .ascii-bar-track{background:#334155 !important;border-color:#475569 !important}
+body.dark-mode .ascii-tree-row{color:#e2e8f0 !important}
+body.dark-mode .ascii-tree-l0{color:#fbbf24 !important}
+body.dark-mode .ascii-treemap-bar{border-color:#475569 !important}
+.ascii-tree-l1{font-weight:500;color:#2c5282}
+.ascii-tree-l2{color:#4a5568}
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('a[href]');
+  links.forEach(function(link) {
+    const href = link.getAttribute('href');
+    if (href && (href.includes('appendix_') || href.includes('附件'))) {
+      link.className = 'appendix-link';
+    }
+  });
+});
+</script>
+
+</head>
+<body><button id="dark-mode-toggle" class="theme-toggle-btn" title="切换深色模式" aria-label="切换深色模式">🌙</button>
+<div class="nav"><a href="index.html">📊 目录</a></div>
+<div class="toc-sidebar"><div class="toc-title">📑 章节导航（共 21 节）</div>
+<ul class="toc-list">
+<li><a href="#auto-h-1-2d076e" class="toc-h2">一、重新定位：从 REITs 投资人 → 运管统筹机构</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-101-b64bbf" class="toc-h3">1.1 为什么不直接投资 REITs</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-102-c1218d" class="toc-h3">1.2 新定位：运管统筹机构（方案B）</a>
+</ul>
+<li><a href="#auto-h-2-423c55" class="toc-h2">二、运管能力建设路径</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-103-1dba76" class="toc-h3">现状：天保能源无数据中心运营经验</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-104-e5f5e9" class="toc-h3">四步走能力建设路径</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-105-2ec1b3" class="toc-h3">运管资质获取清单</a>
+</ul>
+<li><a href="#auto-h-3-eec23d" class="toc-h2">三、港股双主业故事</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-106-8d9965" class="toc-h3">3.1 估值逻辑</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-107-e54fa9" class="toc-h3">3.2 资本市场叙事四要素</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-108-35cb21" class="toc-h3">3.3 关键催化剂时间表</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-109-550896" class="toc-h3">3.4 投资者沟通策略</a>
+</ul>
+<li><a href="#auto-h-4-816324" class="toc-h2">四、绿电+储能业务合作</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-110-0c97c2" class="toc-h3">4.1 绿电供给（详见前版分析，此处只列要点）</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-111-807c9d" class="toc-h3">4.2 储能合作（新增）</a>
+</ul>
+<li><a href="#auto-h-5-e3966a" class="toc-h2">五、运管统筹机构的经济账</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-112-c02d1b" class="toc-h3">5.1 收入结构分析</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-113-a6364f" class="toc-h3">5.2 收入测算</a>
+<ul class="toc-sub">
+<li><a href="#auto-h-114-e829d3" class="toc-h3">5.3 对上市公司利润的影响</a>
+</ul>
+<li><a href="#auto-h-6-79cd7f" class="toc-h2">六、风险与应对</a>
+</ul>
+<li><a href="#auto-h-7-bf9ab0" class="toc-h2">七、推荐行动</a>
+</ul>
+</ul>
+</div>
+
+<div class="key-conclusion">
+<h3 class="callout-h">🎯 关键结论</h3>
+<p>核心观点详见正文各章节分析。</p>
+</div>
+<h1>02 — 天保能源专项：运管统筹 · 绿电储能 · 港股双主业转型</h1>
+<h2 id="auto-h-1-2d076e">一、重新定位：从 REITs 投资人 → 运管统筹机构</h2>
+<h3 id="auto-h-101-b64bbf">1.1 为什么不直接投资 REITs</h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主业属性</td>
+<td>能源供应（售电+供热），非金融投资平台</td>
+</tr>
+<tr>
+<td>资金体量</td>
+<td>港股小市值公司，17亿投资远超能力范围</td>
+</tr>
+<tr>
+<td>投资者预期</td>
+<td>港股投资者偏好主业清晰的公司，跨界投资折价</td>
+</tr>
+<tr>
+<td>合规风险</td>
+<td>重大投资需披露+可能触发 reverse takeover 规则</td>
+</tr>
+</tbody>
+</table>
+<h3 id="auto-h-102-c1218d">1.2 新定位：运管统筹机构（方案B）</h3>
+<div class="ascii-figure ascii-steps"><div class="ascii-figure-title">📋 路径流程（有序步骤）</div><div class="steps-container"><div class="step-row"><div class="step-num" style="background:#1a365d">1</div><div class="step-content">中信建投方案B（原表述）:</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#2c5282">2</div><div class="step-content">&quot;天保控股作为运营管理统筹机构，统筹审核运管重大事项，</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#d69e2e">3</div><div class="step-content">瀚瑞德作为运营管理实施机构，负责具体一线运营执行，</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#2f855a">4</div><div class="step-content">且所有重大事项上报统筹机构审批。</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#718096">5</div><div class="step-content">当运营净收益超过业绩目标值的一定比例后，超过部分的</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#c53030">6</div><div class="step-content">收益部分支付给天保控股。&quot;</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#1a365d">7</div><div class="step-content">天保能源的角色适配:</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#2c5282">8</div><div class="step-content">天保控股(集团)获得「运管统筹」资质</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#d69e2e">9</div><div class="step-content">授权/委托</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#2f855a">10</div><div class="step-content">天保能源(上市)</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#718096">11</div><div class="step-content">实际执行运管统筹职能</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#c53030">12</div><div class="step-content">获得: 运管牌照经验 + 激励费分成 + 港股双主业故事</div></div></div></div>
+<p><strong>为何是天保能源而非其他子公司？</strong></p>
+<table>
+<thead>
+<tr>
+<th>子公司</th>
+<th>能源专业</th>
+<th>上市地位</th>
+<th>运维基因</th>
+<th>绿电协同</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>天保能源</strong></td>
+<td>✅ 核心能力</td>
+<td>✅ 港股</td>
+<td>⚠️ 需培育</td>
+<td>✅ 天然协同</td>
+</tr>
+<tr>
+<td>天保基建</td>
+<td>❌</td>
+<td>✅ A股</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>新兴科技</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<p>天保能源是唯一同时具备「能源专业+上市地位+绿电协同」的平台。</p>
+<h2 id="auto-h-2-423c55">二、运管能力建设路径</h2>
+<h3 id="auto-h-103-1dba76">现状：天保能源无数据中心运营经验</h3>
+<pre><code>当前: 售电+供热运营商
+目标: 「算力基础设施综合服务商」= 能源 + 数据中心运营
+</code></pre>
+<h3 id="auto-h-104-e5f5e9">四步走能力建设路径</h3>
+<div class="ascii-figure ascii-steps"><div class="ascii-figure-title">📋 路径流程（有序步骤）</div><div class="steps-container"><div class="step-row"><div class="step-num" style="background:#1a365d">1</div><div class="step-content">Phase 1 (2026-2027): 参股+观摩</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#2c5282">2</div><div class="step-content">│ 天保能源参股瀚瑞德（从杨帆手中购少数股权）  │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#d69e2e">3</div><div class="step-content">│ 派驻1-2名高管进入瀚瑞德管理层           │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#2f855a">4</div><div class="step-content">│ 学习数据中心运维体系（8年零事故经验）     │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#718096">5</div><div class="step-content">│ 获得运管相关资质: CQC L3、ITSS、ISO系列  │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#c53030">6</div><div class="step-content">Phase 2 (2027-2028): 联合运管</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#1a365d">7</div><div class="step-content">│ 天保能源取得「运管统筹机构」正式身份     │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#2c5282">8</div><div class="step-content">│ 瀚瑞德</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#d69e2e">9</div><div class="step-content">实施机构, 天保能源</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#2f855a">10</div><div class="step-content">统筹审核      │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#718096">11</div><div class="step-content">│ 人员借调: 瀚瑞德核心团队辅助天保能源     │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#c53030">12</div><div class="step-content">│ 逐步接手: 预算审核/合同管理/供应商管理    │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#1a365d">13</div><div class="step-content">Phase 3 (2028-2030): 独立运管</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#2c5282">14</div><div class="step-content">│ 天保能源获得完整运管资质体系            │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#d69e2e">15</div><div class="step-content">│ 可独立承接数据中心运维项目             │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#2f855a">16</div><div class="step-content">│ 二期/综保区新建数据中心由天保能源运管    │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#718096">17</div><div class="step-content">│ 形成「天保能源运管」独立品牌            │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#c53030">18</div><div class="step-content">Phase 4 (2030+): 对外输出</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#1a365d">19</div><div class="step-content">│ 天保能源成为第三方数据中心运管服务商     │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#2c5282">20</div><div class="step-content">│ 服务对象: 不仅汇天，还包括其他IDC        │</div></div><div class="step-arrow">↓</div><div class="step-row"><div class="step-num" style="background:#d69e2e">21</div><div class="step-content">│ 港股定位: 「算力基础设施综合服务商」     │</div></div></div></div>
+<h3 id="auto-h-105-2ec1b3">运管资质获取清单</h3>
+<table>
+<thead>
+<tr>
+<th>资质</th>
+<th>当前状态(瀚瑞德)</th>
+<th>天保能源获取路径</th>
+<th>时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CQC运维能力L3级</td>
+<td>✅ 行业最高</td>
+<td>参股后可纳入体系</td>
+<td>1-2年</td>
+</tr>
+<tr>
+<td>ITSS运维服务三级</td>
+<td>✅</td>
+<td>独立申请</td>
+<td>1年</td>
+</tr>
+<tr>
+<td>ISO 20000/27001/22301</td>
+<td>✅</td>
+<td>独立申请</td>
+<td>6-12月</td>
+</tr>
+<tr>
+<td>增值电信业务经营许可证</td>
+<td>✅</td>
+<td>瀚瑞德持有，可共享</td>
+<td>随时</td>
+</tr>
+<tr>
+<td>高新技术企业</td>
+<td>✅</td>
+<td>瀚瑞德持有</td>
+<td>—</td>
+</tr>
+<tr>
+<td>专精特新中小企业</td>
+<td>✅</td>
+<td>瀚瑞德持有</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="auto-h-3-eec23d">三、港股双主业故事</h2>
+<h3 id="auto-h-106-8d9965">3.1 估值逻辑</h3>
+<div class="ascii-figure ascii-progress"><div class="ascii-figure-title">📊 控股 / 持股 / 比例分布（横向进度条）</div><div class="progress-container"><div class="progress-row"><div class="progress-label">市值提升空间: 50-100%</div><div class="progress-track"><div class="progress-fill" style="width:50.0%;background:#1a365d"><span class="progress-num">50.0%</span></div></div></div></div></div>
+<h3 id="auto-h-107-e54fa9">3.2 资本市场叙事四要素</h3>
+<table>
+<thead>
+<tr>
+<th>叙事要素</th>
+<th>具体内容</th>
+<th>市场信号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>赛道切换</strong></td>
+<td>从传统能源→AI算力基础设施</td>
+<td>🔥 AI概念股</td>
+</tr>
+<tr>
+<td><strong>稀缺标的</strong></td>
+<td>港股唯一的「绿电+数据中心运营」标的</td>
+<td>稀缺溢价</td>
+</tr>
+<tr>
+<td><strong>业绩支撑</strong></td>
+<td>绿电收入(稳定)+运管激励费(成长)</td>
+<td>双引擎增长</td>
+</tr>
+<tr>
+<td><strong>政策红利</strong></td>
+<td>碳中和(绿电)+新基建(算力)+京津冀协同</td>
+<td>政策概念叠加</td>
+</tr>
+</tbody>
+</table>
+<h3 id="auto-h-108-35cb21">3.3 关键催化剂时间表</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>市场影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026 Q3</td>
+<td>签署运管统筹框架协议</td>
+<td>概念首曝，股价初步反应</td>
+</tr>
+<tr>
+<td>2026 Q4</td>
+<td>参股瀚瑞德/签署绿电年度合约</td>
+<td>实质性进展，机构覆盖</td>
+</tr>
+<tr>
+<td>2027 H1</td>
+<td>年报首次体现「数据中心运营」板块</td>
+<td>双主业正式确立</td>
+</tr>
+<tr>
+<td>2027 H2</td>
+<td>启动运管资质独立申请</td>
+<td>长期能力建设</td>
+</tr>
+<tr>
+<td>2028+</td>
+<td>二期项目运管+绿电供应</td>
+<td>业绩兑现，估值切换</td>
+</tr>
+</tbody>
+</table>
+<h3 id="auto-h-109-550896">3.4 投资者沟通策略</h3>
+<p><strong>对内</strong>:</p>
+<ul>
+<li>董事会: 「低风险业务转型，不增加资本开支，利用现有能源能力」</li>
+<li>集团: 「支撑REITs并表架构，实现集团整体战略」</li>
+</ul>
+<p><strong>对外</strong>:</p>
+<ul>
+<li>「天保能源正从区域能源供应商升级为AI时代的绿色算力基础设施服务商」</li>
+<li>关键KPI: 运管服务收入占比从0%→15-20%（5年目标）</li>
+<li>可比公司切换: 从「传统能源」指数→纳入「新基建」主题</li>
+</ul>
+<h2 id="auto-h-4-816324">四、绿电+储能业务合作</h2>
+<h3 id="auto-h-110-0c97c2">4.1 绿电供给（详见前版分析，此处只列要点）</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>启动时间</td>
+<td>2027年年度合约</td>
+</tr>
+<tr>
+<td>首年规模</td>
+<td>约3-5亿kWh（东八栋）</td>
+</tr>
+<tr>
+<td>远期规模</td>
+<td>约17.5亿kWh（全部+二期）</td>
+</tr>
+<tr>
+<td>收入贡献</td>
+<td>服务费模式, 首年250万→远期875万/年</td>
+</tr>
+<tr>
+<td>战略价值</td>
+<td>绑定大客户+支撑REITs绿电指标+港股ESG溢价</td>
+</tr>
+</tbody>
+</table>
+<h3 id="auto-h-111-807c9d">4.2 储能合作（新增）</h3>
+<h4>汇天储能需求</h4>
+<table>
+<thead>
+<tr>
+<th>需求场景</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>备用电源</td>
+<td>柴油发电机替代/补充（降低碳排放）</td>
+</tr>
+<tr>
+<td>削峰填谷</td>
+<td>利用峰谷电价差降低运营成本</td>
+</tr>
+<tr>
+<td>绿电消纳</td>
+<td>匹配光伏/风电的间歇性，提高绿电利用率</td>
+</tr>
+<tr>
+<td>电网调频</td>
+<td>参与京津唐辅助服务市场</td>
+</tr>
+</tbody>
+</table>
+<h4>合作模式</h4>
+<div class="ascii-figure ascii-progress"><div class="ascii-figure-title">📊 控股 / 持股 / 比例分布（横向进度条）</div><div class="progress-container"><div class="progress-row"><div class="progress-label">IRR: 8-12%</div><div class="progress-track"><div class="progress-fill" style="width:8.0%;background:#1a365d"><span class="progress-num">8.0%</span></div></div></div></div></div>
+<h4>储能经济性测算</h4>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>初期(10MW)</th>
+<th>远期(50MW)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>投资</td>
+<td>3,000万</td>
+<td>1.5亿</td>
+</tr>
+<tr>
+<td>年峰谷套利</td>
+<td>200-300万</td>
+<td>1,000-1,500万</td>
+</tr>
+<tr>
+<td>辅助服务收入</td>
+<td>50-100万</td>
+<td>250-500万</td>
+</tr>
+<tr>
+<td>年总收入</td>
+<td>250-400万</td>
+<td>1,250-2,000万</td>
+</tr>
+<tr>
+<td>年运管成本</td>
+<td>~50万</td>
+<td>~250万</td>
+</tr>
+<tr>
+<td>年净收益</td>
+<td>200-350万</td>
+<td>1,000-1,750万</td>
+</tr>
+<tr>
+<td>IRR</td>
+<td>7-12%</td>
+<td>7-12%</td>
+</tr>
+<tr>
+<td>投资回收期</td>
+<td>8-12年</td>
+<td>8-12年</td>
+</tr>
+</tbody>
+</table>
+<h2 id="auto-h-5-e3966a">五、运管统筹机构的经济账</h2>
+<h3 id="auto-h-112-c02d1b">5.1 收入结构分析</h3>
+<p>中信建投方案中的运管费体系（以目标项目为例）:</p>
+<table>
+<thead>
+<tr>
+<th>收入项</th>
+<th>计算方式</th>
+<th>金额（年）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>基础运管费</strong></td>
+<td>年收入×8%-9%（梯级）</td>
+<td>5,440-6,660万</td>
+</tr>
+<tr>
+<td><strong>激励运管费</strong></td>
+<td>超额NOI的80%-99%</td>
+<td>取决于运营表现</td>
+</tr>
+<tr>
+<td><strong>运管费下限</strong></td>
+<td>4,100万（对赌触发后）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>天保能源作为「统筹机构」的参与方式:</p>
+<ul>
+<li><strong>路径A（参股瀚瑞德）</strong>: 按参股比例分享以上费用</li>
+<li><strong>路径B（统筹机构）</strong>: 从瀚瑞德应收费中抽取「统筹管理费」，比例协商确定（如20-30%）</li>
+</ul>
+<h3 id="auto-h-113-a6364f">5.2 收入测算</h3>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th>基础运管费(年)</th>
+<th>天保能源分成比例</th>
+<th>天保能源年收入</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>保守</td>
+<td>4,100万(下限)</td>
+<td>20%</td>
+<td>820万</td>
+</tr>
+<tr>
+<td>基准</td>
+<td>5,440万</td>
+<td>25%</td>
+<td>1,360万</td>
+</tr>
+<tr>
+<td>乐观</td>
+<td>6,660万</td>
+<td>30%+激励分成</td>
+<td>2,000万+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="auto-h-114-e829d3">5.3 对上市公司利润的影响</h3>
+<p>假设天保能源年净利润约数千万:</p>
+<ul>
+<li>运管收入基准1,360万 → 利润增长约20-30%</li>
+<li>加上绿电服务费 → 合计增长约30-40%</li>
+<li>如果达到乐观情景(含激励分成) → 利润可达翻倍</li>
+</ul>
+<p><strong>但更重要的是</strong>: 这为天保能源开启了一个全新的收入来源, 且具有高成长性(随REITs扩募→运管规模扩大→收入增长)。</p>
+<h2 id="auto-h-6-79cd7f">六、风险与应对</h2>
+<table>
+<thead>
+<tr>
+<th>风险</th>
+<th>严重度</th>
+<th>应对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>运管能力建设周期长</td>
+<td>🟡 中</td>
+<td>前期参股瀚瑞德, 逐步过渡, 不急于独立</td>
+</tr>
+<tr>
+<td>港股投资者不认可双主业</td>
+<td>🟡 中</td>
+<td>做好投资者沟通+分析师覆盖+可比公司教育</td>
+</tr>
+<tr>
+<td>瀚瑞德不配合/竞争</td>
+<td>🟡 中</td>
+<td>参股+协议约束+关键人员保留</td>
+</tr>
+<tr>
+<td>运管激励费不确定</td>
+<td>🟢 低</td>
+<td>基础运管费有下限保障(4,100万)</td>
+</tr>
+<tr>
+<td>储能投资回收期长</td>
+<td>🟢 低</td>
+<td>优先轻资产模式(EPC+运管)</td>
+</tr>
+<tr>
+<td>绿电月度交易额度不足</td>
+<td>🟡 中</td>
+<td>2027转年度交易, 不足部分绿证补</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="auto-h-7-bf9ab0">七、推荐行动</h2>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>行动</th>
+<th>时限</th>
+<th>优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>与中信建投/汇天确认运管方案B的可行性+天保能源角色的接受度</td>
+<td>7月底</td>
+<td>P0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>启动瀚瑞德参股谈判（少数股权，如15-20%）</td>
+<td>9月</td>
+<td>P0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>签署绿电2027年度交易框架协议</td>
+<td>9月</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>启动运管资质独立申请准备工作（ITSS/ISO体系搭建）</td>
+<td>Q4</td>
+<td>P1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>储能合作方案调研+技术方案设计</td>
+<td>Q4</td>
+<td>P2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>启动港股投资者沟通计划（分析师覆盖+路演）</td>
+<td>Q4</td>
+<td>P2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>独立运管能力评估+品牌建设方案</td>
+<td>2027 H1</td>
+<td>P3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>分析日期: 2026-07-13</em></p>
+
+<script>
+/* ===== enhance_report: 浮动侧边栏切换（V3.43.3: 增强外部点击关闭） ===== */
+(function(){
+  /* 给已有 toggle 按钮附加「点击外部关闭」功能 */
+  function enhanceExistingToggle(btnSel, targetSel){
+    var btn = document.querySelector(btnSel);
+    var target = document.querySelector(targetSel);
+    if (!btn || !target) return;
+    if (btn.dataset.enhanced === '1') return;
+    btn.dataset.enhanced = '1';
+    // 包装原 onclick：点击切换 + 自动关闭其它侧栏
+    var origOnClick = btn.onclick;
+    btn.onclick = function(e){
+      // V14.0 FIX: 防御 e 为 undefined（直接调用 onclick() 测试场景）
+      if (e && e.stopPropagation) e.stopPropagation();
+      if (origOnClick) origOnClick.call(this, e);
+      // 关闭对侧
+      var isToc = btnSel.indexOf('toc') >= 0;
+      var otherSel = isToc ? '.key-conclusion' : '.toc-sidebar';
+      var otherBtnSel = isToc ? '.key-conclusion-toggle' : '.toc-sidebar-toggle';
+      var other = document.querySelector(otherSel);
+      var otherBtn = document.querySelector(otherBtnSel);
+      if (other && other.classList.contains('open')){
+        other.classList.remove('open');
+        if (otherBtn) otherBtn.innerHTML = otherBtn.dataset.origLabel || otherBtn.innerHTML.replace('✕ 关闭','').trim() || '📑 目录';
+      }
+    };
+    // 记录原始 label
+    if (!btn.dataset.origLabel) btn.dataset.origLabel = btn.innerHTML.replace('✕ 关闭','').trim();
+    // 点击侧栏外部关闭 + body padding 避让
+    document.addEventListener('click', function(e){
+      if (!target.classList.contains('open')) return;
+      if (target.contains(e.target) || btn.contains(e.target)) return;
+      target.classList.remove('open');
+      btn.innerHTML = btn.dataset.origLabel || btn.innerHTML;
+    });
+    // 监听 open 状态变化 → 调整 body padding 避免遮挡
+    var isToc = btnSel.indexOf('toc') >= 0;
+    var observer = new MutationObserver(function(){
+      var open = target.classList.contains('open');
+      var otherOpen = document.querySelector((isToc ? '.key-conclusion' : '.toc-sidebar')).classList.contains('open');
+      if (open && !otherOpen){
+        if (isToc) document.body.style.paddingLeft = '260px';
+        else document.body.style.paddingRight = '280px';
+      } else if (!open && !otherOpen){
+        document.body.style.paddingLeft = '';
+        document.body.style.paddingRight = '';
+      } else if (open && otherOpen){
+        // 两个都打开：双向避让
+        document.body.style.paddingLeft = '260px';
+        document.body.style.paddingRight = '280px';
+      }
+    });
+    observer.observe(target, {attributes: true, attributeFilter: ['class']});
+    // ESC 键关闭
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && target.classList.contains('open')){
+        target.classList.remove('open');
+        btn.innerHTML = btn.dataset.origLabel || btn.innerHTML;
+      }
+    });
+  }
+  function makeToggle(targetSel, btnId, label){
+    if (document.querySelector('.' + btnId)) {
+      enhanceExistingToggle('.' + btnId, targetSel);
+      return;
+    }
+    var target = document.querySelector(targetSel);
+    if (!target) return;
+    var btn = document.createElement('button');
+    btn.className = btnId;
+    btn.innerHTML = label;
+    btn.setAttribute('aria-label', '切换' + label);
+    btn.dataset.origLabel = label;
+    btn.onclick = function(){
+      target.classList.toggle('open');
+      btn.innerHTML = target.classList.contains('open') ? '✕ 关闭' : label;
+    };
+    document.body.appendChild(btn);
+    enhanceExistingToggle('.' + btnId, targetSel);
+  }
+  if (document.querySelector('.toc-sidebar')) makeToggle('.toc-sidebar', 'toc-sidebar-toggle', '📑 目录');
+  if (document.querySelector('.key-conclusion')) makeToggle('.key-conclusion', 'key-conclusion-toggle', '⭐ 关键结论');
+})();
+</script><script>
+/* ===== enhance_report: 深色模式切换（V12.0 新增） ===== */
+(function(){
+  // 1) 注入按钮（若 HTML 中尚无）
+  if (!document.getElementById('dark-mode-toggle')) {
+    var btn = document.createElement('button');
+    btn.id = 'dark-mode-toggle';
+    btn.className = 'theme-toggle-btn';
+    btn.title = '切换深色模式';
+    btn.setAttribute('aria-label', '切换深色模式');
+    btn.textContent = '🌙';
+    document.body.appendChild(btn);
+  }
+  // 2) 启动时恢复 localStorage 状态
+  try {
+    if (localStorage.getItem('dark-mode') === '1') {
+      document.body.classList.add('dark-mode');
+      var b0 = document.getElementById('dark-mode-toggle');
+      if (b0) b0.textContent = '☀️';
+    }
+  } catch(e) {}
+  // 3) 点击切换
+  var darkBtn = document.getElementById('dark-mode-toggle');
+  if (darkBtn) {
+    darkBtn.addEventListener('click', function(){
+      document.body.classList.toggle('dark-mode');
+      var isDark = document.body.classList.contains('dark-mode');
+      darkBtn.textContent = isDark ? '☀️' : '🌙';
+      try { localStorage.setItem('dark-mode', isDark ? '1' : '0'); } catch(e) {}
+    });
+  }
+})();
+</script></body>
+</html>
