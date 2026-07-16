@@ -1,5 +1,5 @@
 /* ============================================================
- * report.css · V11k 公文版式（2026-07-16 主公确认 v1.6 SKILL.md）
+ * report.css · V11l 公文版式（2026-07-16 主公确认 v1.6 SKILL.md）
  * 配套 skills/html-deploy/ 使用
  * ============================================================ */
 
@@ -244,25 +244,25 @@ html, body {
 }
 
 /* 主标题（图表顶部标题）— 对齐 --size-h3【v1.6 主公二次反馈核心】 */
-.report figure.chart-figure svg text[font-size="2.8"] {
+.report figure.chart-figure svg text[font-size="20"] {
   font-size: 20px !important;
   font-weight: 700 !important;
   fill: var(--color-primary) !important;
 }
 
 /* 副标题/分组标题 — 对齐 --size-table */
-.report figure.chart-figure svg text[font-size="2.2"] {
+.report figure.chart-figure svg text[font-size="15"] {
   font-size: 15px !important;
   font-weight: 600 !important;
 }
 
 /* 数据标签 — 不粗体不主色 */
-.report figure.chart-figure svg text[font-size="1.8"] {
+.report figure.chart-figure svg text[font-size="13"] {
   font-size: 13px !important;
 }
 
 /* 脚注/小字 — 对齐 --size-footer */
-.report figure.chart-figure svg text[font-size="1.3"] {
+.report figure.chart-figure svg text[font-size="10"] {
   font-size: 10px !important;
   fill: var(--color-muted) !important;
 }
@@ -274,7 +274,7 @@ html, body {
   fill: var(--color-primary) !important;
 }
 
-.report figure.chart-figure svg text[font-size="2.5"] {
+.report figure.chart-figure svg text[font-size="17"] {
   font-size: 20px !important;  /* 18×1.0=18→升到 20px H3 */
   font-weight: 700 !important;
   fill: var(--color-primary) !important;
