@@ -1,60 +1,51 @@
-# 📋 manifest.yml — 汇天网络 · 34% REITs 一揽子合作
-# ========================================================
-# 主公 2026-07-17「删除报告必须联动 dashboard 入口」专项
-# 当前真实清单（2026-07-17 清理后状态）
-
 project: huitian-network-report
 title: 汇天网络 · 34% REITs 一揽子合作
 subtitle: 天保控股战略协同 · 机构间 REITs 储备项目
 stage: 储备·非上市
 report_version: V2
-last_update: 2026-07-17
-
+last_update: '2026-07-17'
 hero:
   category: REITs
   amount: 14.76-16.23 亿
   highlight: 34% 机构间 REITs · 四方协同
-
-# 有效报告（dashboard 展示）
 reports:
-  - file: huitian_cooperation.html
-    title: V2 主报告 · 四方协同框架重构
-    date: 2026-07-15
-    status: active
-    tags: [主报告, V2]
-    desc: 四篇+两附件分层架构 · 含国企持有被禁 GPU 风险专章
-    color: main
-
-# 已归档（2026-07-17 清理）· dashboard 在「已归档」分组显示
-# 这些文件已从仓库删除，但保留记录供后续需要时 git 历史找回
+- file: huitian_cooperation.html
+  title: V2 主报告 · 四方协同框架重构
+  date: 2026-07-15
+  status: active
+  tags:
+  - 主报告
+  - V2
+  desc: 四篇+两附件分层架构 · 含国企持有被禁 GPU 风险专章
+  color: main
 deprecated:
-  - file: huitian_cooperation_v1.html
-    title: V1 主报告（五篇顺序展开版）
-    date: 2026-07-14
-    removed: 2026-07-17
-    note: 被 V2 取代，已从仓库删除
-  - file: report_00.html
-    title: 00-纵横分析 · 34% 纯市场化投资价值研究
-    date: 2026-07-14
-    removed: 2026-07-17
-  - file: report_01.html
-    title: 01-天保基建专项 · 10 亿减值化解
-    date: 2026-07-13
-    removed: 2026-07-17
-  - file: report_02.html
-    title: 02-天保能源专项 · 港股转型 IDC 运营商
-    date: 2026-07-13
-    removed: 2026-07-17
-  - file: report_03.html
-    title: 03-新兴科技专项 · GPU 经营租赁
-    date: 2026-07-13
-    removed: 2026-07-17
-  - file: report_04.html
-    title: 04-其他公司综合 · 过桥 + 设备回租
-    date: 2026-07-13
-    removed: 2026-07-17
-  - file: archive_report_v1528.html
-    title: V15.2.8 增强测试版
-    date: 2026-07-13
-    removed: 2026-07-17
-    note: V15.2.8 模板测试版，已被 V2 取代
+- file: huitian_cooperation_v1.html
+  title: V1 主报告（五篇顺序展开版）
+  date: 2026-07-14
+  removed: 2026-07-17
+  note: 被 V2 取代，已从仓库删除
+- file: report_00.html
+  title: 00-纵横分析 · 34% 纯市场化投资价值研究
+  date: 2026-07-14
+  removed: 2026-07-17
+- file: report_01.html
+  title: 01-天保基建专项 · 10 亿减值化解
+  date: 2026-07-13
+  removed: 2026-07-17
+- file: report_02.html
+  title: 02-天保能源专项 · 港股转型 IDC 运营商
+  date: 2026-07-13
+  removed: 2026-07-17
+- file: report_03.html
+  title: 03-新兴科技专项 · GPU 经营租赁
+  date: 2026-07-13
+  removed: 2026-07-17
+- file: report_04.html
+  title: 04-其他公司综合 · 过桥 + 设备回租
+  date: 2026-07-13
+  removed: 2026-07-17
+- file: archive_report_v1528.html
+  title: V15.2.8 增强测试版
+  date: 2026-07-13
+  removed: 2026-07-17
+  note: V15.2.8 模板测试版，已被 V2 取代
