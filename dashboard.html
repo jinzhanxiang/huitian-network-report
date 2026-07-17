@@ -3,266 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>汇天网络科技 · 项目报告中心</title>
+<title>汇天网络 · 34% REITs 一揽子合作 · 项目报告中心</title>
 <link rel="stylesheet" href="https://jinzhanxiang.github.io/tianbao-projects/assets/report.css">
+<style>
+:root {
+  --primary: #1a365d;
+  --accent: #c53030;
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --text: #2d3748;
+  --muted: #718096;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.nav { background: var(--primary); color: white; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+.nav a { color: white; text-decoration: none; opacity: 0.85; margin-left: 18px; font-size: 14px; }
+.nav a:hover { opacity: 1; }
+.container { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+.hero { background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%); color: white; padding: 40px 32px; border-radius: 12px; margin-bottom: 28px; }
+.hero h1 { font-size: 28px; margin-bottom: 8px; }
+.hero p { opacity: 0.9; font-size: 15px; margin-bottom: 24px; }
+.hero-stats { display: flex; gap: 32px; flex-wrap: wrap; }
+.hero-stat { background: rgba(255,255,255,0.15); padding: 12px 20px; border-radius: 8px; min-width: 110px; }
+.hero-stat .num { font-size: 28px; font-weight: 700; }
+.hero-stat .lbl { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+.tabs { display: flex; border-bottom: 2px solid var(--border); margin-bottom: 24px; }
+.tab { padding: 14px 24px; cursor: pointer; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+.tab:hover { color: var(--primary); }
+.tab.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 600; }
+.tab-count { background: var(--primary); color: white; padding: 2px 8px; border-radius: 10px; font-size: 12px; margin-left: 6px; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before { content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; background: var(--border); }
+.tl-item { position: relative; margin-bottom: 28px; padding-left: 20px; }
+.tl-item::before { content: ''; position: absolute; left: -28px; top: 8px; width: 14px; height: 14px; border-radius: 50%; background: var(--primary); border: 3px solid white; box-shadow: 0 0 0 2px var(--primary); }
+.tl-item.tl-main::before { background: var(--primary); }
+.tl-item.tl-thirdparty::before { background: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+.tl-item.tl-meeting::before { background: #d69e2e; box-shadow: 0 0 0 2px #d69e2e; }
+.tl-item.tl-first::before { background: #38a169; box-shadow: 0 0 0 2px #38a169; }
+.tl-date { color: var(--muted); font-size: 13px; margin-bottom: 4px; }
+.tl-title { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+.tl-desc { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
+.tl-link { display: inline-block; padding: 6px 14px; background: var(--primary); color: white; text-decoration: none; border-radius: 6px; font-size: 14px; }
+.tl-link:hover { background: #2c5282; }
+.report-group { margin-bottom: 32px; }
+.rg-title { font-size: 18px; font-weight: 600; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+.r-card { display: flex; align-items: center; gap: 16px; padding: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.r-card:hover { border-color: var(--primary); box-shadow: 0 4px 12px rgba(26,54,93,0.1); }
+.r-emoji { font-size: 24px; }
+.r-body { flex: 1; }
+.r-name { font-weight: 600; margin-bottom: 4px; }
+.r-meta { font-size: 13px; color: var(--muted); }
+.r-arrow { color: var(--muted); font-size: 18px; }
+.archived { opacity: 0.7; border-style: dashed; }
+.archived-note { background: #fef5e7; border-left: 4px solid #d69e2e; padding: 12px 16px; border-radius: 4px; margin-bottom: 20px; font-size: 14px; color: #744210; }
+@media (max-width: 768px) {
+  .hero { padding: 24px 20px; }
+  .hero h1 { font-size: 22px; }
+  .hero-stats { gap: 16px; }
+  .tab { padding: 12px 16px; font-size: 14px; }
+}
+</style>
 </head>
 <body>
-
-<div class="back-nav">
-  <div class="nav-left">
+<div class="nav">
+  <div>📊 汇天网络 · 34% REITs 一揽子合作</div>
+  <div>
     <a href="https://jinzhanxiang.github.io/tianbao-projects/">← 返回主中心</a>
-    <a href="index.html">📋 简易目录</a>
   </div>
-  <span class="project-title">天保控股 · 汇天网络 IDC 项目</span>
-  <div class="nav-right">
-    <span class="project-status np">非上市储备</span>
-  </div>
-</div>
-
-<div class="hero">
-  <h1>🌐 汇天网络 · 34% REITs 一揽子合作</h1>
-  <p>非上市储备项目 · 7 份研究报告 · V2 主报告（2026-07-15）· 双视图导航</p>
-  <div class="hero-stats">
-    <div class="hero-stat success"><div class="num">7</div><div class="lbl">有效报告</div></div>
-    <div class="hero-stat"><div class="num">8</div><div class="lbl">网站文件</div></div>
-    <div class="hero-stat"><div class="num">5</div><div class="lbl">专项报告</div></div>
-    <div class="hero-stat warn"><div class="num">V2</div><div class="lbl">主报告版本</div></div>
-  </div>
-</div>
-
-<div class="tabs">
-  <div class="tab active" data-tab="timeline">📅 时间线视图<span class="tab-count">5</span></div>
-  <div class="tab" data-tab="reports">📋 全部报告总览<span class="tab-count">7</span></div>
-  <div class="tab" data-tab="methodology">🧭 方法论与状态<span class="tab-count">4</span></div>
 </div>
 
 <div class="container">
-
-  <!-- KPI 条 -->
-  <div class="kpi-strip">
-    <div class="kpi"><div class="kpi-lbl">合作类型</div><div class="kpi-val">机构间 REITs</div><div class="kpi-sub">认购 34% 份额</div></div>
-    <div class="kpi"><div class="kpi-lbl">34% 投入</div><div class="kpi-val warn">14.76-16.23 亿</div><div class="kpi-sub">溢价 0-10% 区间</div></div>
-    <div class="kpi"><div class="kpi-lbl">基准 IRR</div><div class="kpi-val warn">5.00%</div><div class="kpi-sub">介于国债与公募 REITs 间</div></div>
-    <div class="kpi"><div class="kpi-lbl">协同综合</div><div class="kpi-val success">7-9%</div><div class="kpi-sub">四方协同后方向性</div></div>
-    <div class="kpi"><div class="kpi-lbl">建议主体</div><div class="kpi-val">天保基建</div><div class="kpi-sub">上市公司持 34%</div></div>
-    <div class="kpi"><div class="kpi-lbl">项目状态</div><div class="kpi-val warn">储备·待签约</div><div class="kpi-sub">6 项准备工作中</div></div>
+  <div class="hero">
+    <h1>汇天网络 · 34% REITs 一揽子合作</h1>
+    <p>天保控股战略协同 · 机构间 REITs 储备项目 · 储备·非上市 · 1 份有效报告 · 主报告V2 · 部署 2026-07-17</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">1</div><div class="lbl">有效报告</div></div>
+      <div class="hero-stat"><div class="num">7</div><div class="lbl">已归档</div></div>
+      <div class="hero-stat"><div class="num">V2</div><div class="lbl">主报告版本</div></div>
+      <div class="hero-stat"><div class="num">14.76-16.23 亿</div><div class="lbl">REITs</div></div>
+    </div>
   </div>
 
-  <!-- 时间线视图 -->
+  <div class="tabs">
+    <div class="tab active" data-tab="timeline">📅 时间线视图<span class="tab-count">8</span></div>
+    <div class="tab" data-tab="reports">📋 全部报告总览<span class="tab-count">1</span></div>
+  </div>
+
   <div class="tab-panel active" id="panel-timeline">
     <div class="timeline">
-
       <div class="tl-item tl-main">
-        <div class="tl-dot"></div>
         <div class="tl-date">2026-07-15</div>
-        <div class="tl-title">📜 主报告 V2 · 四方协同框架重构</div>
-        <div class="tl-desc">从 V1「五篇顺序展开」重构为 V2「四篇+两附件」分层架构：①战略框架（新增报告摘要+ASCII架构图）②风险与控制（上架率压力测试+主体选择）③增长与回报（扩募机制+财务影响）④行动纲领（6 项准备工作）；附件一 34% 纯市场化分析 / 附件二 四个专项。新增国企持有被禁 GPU 风险专章。</div>
-        <div class="tl-links">
-          <a href="huitian_cooperation.html" class="tl-link" target="_blank"><span>📊</span>V2 主报告</a>
-          <a href="huitian_cooperation_v1.html" class="tl-link" target="_blank"><span>📑</span>V1 归档版</a>
-        </div>
+        <div class="tl-title">📜 V2 主报告 · 四方协同框架重构</div>
+        <div class="tl-desc">四篇+两附件分层架构 · 含国企持有被禁 GPU 风险专章</div>
+        <a class="tl-link" href="huitian_cooperation.html">📊 查看报告</a>
       </div>
-
       <div class="tl-item tl-thirdparty">
-        <div class="tl-dot"></div>
-        <div class="tl-date">2026-07-14</div>
-        <div class="tl-title">📊 00-纵横分析 · 34% 纯市场化投资价值研究</div>
-        <div class="tl-desc">独立判断 34% REITs 份额投资价值。结论：纯市场化「风险收益一般」——基准 IRR 5.00%，悲观 IRR 3.94%，合理溢价上限 8.5%。核心风险：上架率 63%（行业最低）+ 79% 收入 2026 年集中到期；核心优势：北京副中心区位 + 4 网一级节点组合（防御性底盘）。</div>
-        <div class="tl-links">
-          <a href="report_00.html" class="tl-link" target="_blank"><span>📐</span>纵横分析</a>
-        </div>
+        <div class="tl-date">2026-07-14 → 已归档 2026-07-17</div>
+        <div class="tl-title">🗄 V1 主报告（五篇顺序展开版）</div>
+        <div class="tl-desc">被 V2 取代，已从仓库删除</div>
       </div>
-
       <div class="tl-item tl-thirdparty">
-        <div class="tl-dot"></div>
-        <div class="tl-date">2026-07-13</div>
-        <div class="tl-title">🏗️ 01-天保基建专项 · 10 亿减值化解（难度极大）</div>
-        <div class="tl-desc">等值资产互换模式（生态城项目 24 亿账面 + 产业园 14 亿）换取 IDC 资产（38 亿账面）。化解路径：IDC 资产 REITs 扩募后一二级估值溢价（预计消纳约 30%），剩余部分通过产业园 IDC 开发增值吸收。专项四难度最大。</div>
-        <div class="tl-links">
-          <a href="report_01.html" class="tl-link" target="_blank"><span>🏗️</span>天保基建专项</a>
-        </div>
+        <div class="tl-date">2026-07-14 → 已归档 2026-07-17</div>
+        <div class="tl-title">🗄 00-纵横分析 · 34% 纯市场化投资价值研究</div>
+        <div class="tl-desc">已从仓库删除，git 历史可找回</div>
       </div>
-
       <div class="tl-item tl-thirdparty">
-        <div class="tl-dot"></div>
-        <div class="tl-date">2026-07-13</div>
-        <div class="tl-title">⚡ 02-天保能源专项 · 港股转型 IDC 运营商</div>
-        <div class="tl-desc">天保能源定位从「区域能源供应商」转型为「算力基础设施综合服务商」+「绿电供应商」。港股估值切换 PE 8-12x → 15-20x（+67-88%）。运管能力建设：参股瀚瑞德（Phase1）→ 联合运管（Phase2）→ 独立运管（Phase3）→ 对外输出（Phase4）。</div>
-        <div class="tl-links">
-          <a href="report_02.html" class="tl-link" target="_blank"><span>⚡</span>天保能源专项</a>
-        </div>
+        <div class="tl-date">2026-07-13 → 已归档 2026-07-17</div>
+        <div class="tl-title">🗄 01-天保基建专项 · 10 亿减值化解</div>
+        <div class="tl-desc">已从仓库删除，git 历史可找回</div>
       </div>
-
       <div class="tl-item tl-thirdparty">
-        <div class="tl-dot"></div>
-        <div class="tl-date">2026-07-13</div>
-        <div class="tl-title">🖥️ 03-新兴科技专项 · GPU 经营租赁（B300 风险）</div>
-        <div class="tl-desc">500-1000 卡试点 B300 GPU 经营租赁。最大风险：B300 美国出口管制 + 黑市价格 + 国企持有被禁芯片合规风险。5 大风险评估：出口管制★★★★★ / 残值崩跌★★★★ / Token 价格下行★★★ / 算力过剩★★★ / 技术路线★★★。底线：B300 列入 BIS 管制后立即停止采购。</div>
-        <div class="tl-links">
-          <a href="report_03.html" class="tl-link" target="_blank"><span>🖥️</span>新兴科技专项</a>
-        </div>
+        <div class="tl-date">2026-07-13 → 已归档 2026-07-17</div>
+        <div class="tl-title">🗄 02-天保能源专项 · 港股转型 IDC 运营商</div>
+        <div class="tl-desc">已从仓库删除，git 历史可找回</div>
       </div>
-
       <div class="tl-item tl-thirdparty">
-        <div class="tl-dot"></div>
-        <div class="tl-date">2026-07-13</div>
-        <div class="tl-title">🏦 04-其他公司综合 · 过桥 + 设备回租 + 投资人</div>
-        <div class="tl-desc">天保小贷 2 亿 + 天保租赁 3 亿 = 5 亿京能退出过桥拼盘（3 天放款）。渤海人寿/天津银行/北方信托补充投资通道。5 亿过桥费按天万八（实际使用控制在数天至数周，绝对利息成本有限）。</div>
-        <div class="tl-links">
-          <a href="report_04.html" class="tl-link" target="_blank"><span>🏦</span>综合金融专项</a>
-        </div>
+        <div class="tl-date">2026-07-13 → 已归档 2026-07-17</div>
+        <div class="tl-title">🗄 03-新兴科技专项 · GPU 经营租赁</div>
+        <div class="tl-desc">已从仓库删除，git 历史可找回</div>
       </div>
-
+      <div class="tl-item tl-thirdparty">
+        <div class="tl-date">2026-07-13 → 已归档 2026-07-17</div>
+        <div class="tl-title">🗄 04-其他公司综合 · 过桥 + 设备回租</div>
+        <div class="tl-desc">已从仓库删除，git 历史可找回</div>
+      </div>
+      <div class="tl-item tl-thirdparty">
+        <div class="tl-date">2026-07-13 → 已归档 2026-07-17</div>
+        <div class="tl-title">🗄 V15.2.8 增强测试版</div>
+        <div class="tl-desc">V15.2.8 模板测试版，已被 V2 取代</div>
+      </div>
     </div>
   </div>
 
-  <!-- 全部报告总览视图 -->
   <div class="tab-panel" id="panel-reports">
-
     <div class="report-group">
-      <div class="rg-title">📊 主报告（含历史归档）</div>
-      <div class="rg-grid">
-        <a class="r-card" href="huitian_cooperation.html" target="_blank">
-          <div class="r-emoji">📊</div>
-          <div class="r-body">
-            <div class="r-name">天保体系与汇天网络 一揽子合作汇总方案 <span class="r-badge">主报告·最新</span></div>
-            <div class="r-meta">V2 · 2026-07-15 · 864KB · 四篇+两附件</div>
-          </div>
-          <div class="r-arrow">→</div>
-        </a>
-        <a class="r-card" href="huitian_cooperation_v1.html" target="_blank">
-          <div class="r-emoji">📑</div>
-          <div class="r-body">
-            <div class="r-name">一揽子合作汇总方案 <span class="r-badge" style="background:#6b7280">V1 归档</span></div>
-            <div class="r-meta">V1 · 2026-07-14 · 五篇顺序展开版（被 V2 取代）</div>
-          </div>
-          <div class="r-arrow">→</div>
-        </a>
+      <div class="rg-title">📊 主报告</div>
+      <a class="r-card" href="huitian_cooperation.html" target="_blank">
+        <div class="r-emoji">📊</div>
+        <div class="r-body">
+          <div class="r-name">V2 主报告 · 四方协同框架重构</div>
+          <div class="r-meta">2026-07-15 · 主报告, V2</div>
+        </div>
+        <div class="r-arrow">→</div>
+      </a>
+    </div>
+    <div class="archived-note">
+      📦 以下 7 份报告已归档（2026-07-17 起不再在线展示）。如需找回，请告知主公从 git 历史取回。
+    </div>
+    <div class="report-group">
+      <div class="rg-title">🗄 已归档（不计入有效报告）</div>
+      <div class="r-card archived">
+        <div class="r-emoji">🗄</div>
+        <div class="r-body">
+          <div class="r-name">V1 主报告（五篇顺序展开版）</div>
+          <div class="r-meta">2026-07-14 · 被 V2 取代，已从仓库删除</div>
+        </div>
+        <div class="r-arrow">—</div>
+      </div>
+      <div class="r-card archived">
+        <div class="r-emoji">🗄</div>
+        <div class="r-body">
+          <div class="r-name">00-纵横分析 · 34% 纯市场化投资价值研究</div>
+          <div class="r-meta">2026-07-14 · 已归档</div>
+        </div>
+        <div class="r-arrow">—</div>
+      </div>
+      <div class="r-card archived">
+        <div class="r-emoji">🗄</div>
+        <div class="r-body">
+          <div class="r-name">01-天保基建专项 · 10 亿减值化解</div>
+          <div class="r-meta">2026-07-13 · 已归档</div>
+        </div>
+        <div class="r-arrow">—</div>
+      </div>
+      <div class="r-card archived">
+        <div class="r-emoji">🗄</div>
+        <div class="r-body">
+          <div class="r-name">02-天保能源专项 · 港股转型 IDC 运营商</div>
+          <div class="r-meta">2026-07-13 · 已归档</div>
+        </div>
+        <div class="r-arrow">—</div>
+      </div>
+      <div class="r-card archived">
+        <div class="r-emoji">🗄</div>
+        <div class="r-body">
+          <div class="r-name">03-新兴科技专项 · GPU 经营租赁</div>
+          <div class="r-meta">2026-07-13 · 已归档</div>
+        </div>
+        <div class="r-arrow">—</div>
+      </div>
+      <div class="r-card archived">
+        <div class="r-emoji">🗄</div>
+        <div class="r-body">
+          <div class="r-name">04-其他公司综合 · 过桥 + 设备回租</div>
+          <div class="r-meta">2026-07-13 · 已归档</div>
+        </div>
+        <div class="r-arrow">—</div>
+      </div>
+      <div class="r-card archived">
+        <div class="r-emoji">🗄</div>
+        <div class="r-body">
+          <div class="r-name">V15.2.8 增强测试版</div>
+          <div class="r-meta">2026-07-13 · V15.2.8 模板测试版，已被 V2 取代</div>
+        </div>
+        <div class="r-arrow">—</div>
       </div>
     </div>
-
-    <div class="report-group">
-      <div class="rg-title">📐 专项研究报告（5 份）</div>
-      <div class="rg-grid">
-        <a class="r-card" href="report_00.html" target="_blank">
-          <div class="r-emoji">📐</div>
-          <div class="r-body">
-            <div class="r-name">00-纵横分析-纯市场投资价值研究 <span class="r-badge">底层研究</span></div>
-            <div class="r-meta">2026-07-14 · 资产/产品/治理三层 + 同业/压力/替代三维度</div>
-          </div>
-          <div class="r-arrow">→</div>
-        </a>
-        <a class="r-card" href="report_01.html" target="_blank">
-          <div class="r-emoji">🏗️</div>
-          <div class="r-body">
-            <div class="r-name">01-天保基建专项-减值处理与业务转型 <span class="r-badge" style="background:#dc2626">硬骨头</span></div>
-            <div class="r-meta">2026-07-13 · 等值互换 + REITs 认购 + 估值切换</div>
-          </div>
-          <div class="r-arrow">→</div>
-        </a>
-        <a class="r-card" href="report_02.html" target="_blank">
-          <div class="r-emoji">⚡</div>
-          <div class="r-body">
-            <div class="r-name">02-天保能源专项-运管统筹与港股转型 <span class="r-badge" style="background:#059669">港股双主业</span></div>
-            <div class="r-meta">2026-07-13 · 运管费 + 绿电 + 港股估值 +67-88%</div>
-          </div>
-          <div class="r-arrow">→</div>
-        </a>
-        <a class="r-card" href="report_03.html" target="_blank">
-          <div class="r-emoji">🖥️</div>
-          <div class="r-body">
-            <div class="r-name">03-新兴科技专项-GPU经营租赁风险分析 <span class="r-badge" style="background:#dc2626">B300 风险</span></div>
-            <div class="r-meta">2026-07-13 · 5 大风险 + 出口管制底线</div>
-          </div>
-          <div class="r-arrow">→</div>
-        </a>
-        <a class="r-card" href="report_04.html" target="_blank">
-          <div class="r-emoji">🏦</div>
-          <div class="r-body">
-            <div class="r-name">04-其他公司综合-租赁小贷保险银行信托 <span class="r-badge" style="background:#0891b2">综合金融</span></div>
-            <div class="r-meta">2026-07-13 · 5 亿过桥拼盘 + 多元化投资人</div>
-          </div>
-          <div class="r-arrow">→</div>
-        </a>
-      </div>
-    </div>
-
-    <div class="report-group">
-      <div class="rg-title">🗂️ 已归档（不计入有效报告）</div>
-      <div class="rg-grid">
-        <a class="r-card" href="archive_report_v1528.html" target="_blank">
-          <div class="r-emoji">🗄️</div>
-          <div class="r-body">
-            <div class="r-name">archive_report_v1528 <span class="r-badge" style="background:#6b7280">已归档</span></div>
-            <div class="r-meta">V15.2.8 增强测试版 · 已被 V2 主报告取代</div>
-          </div>
-          <div class="r-arrow">→</div>
-        </a>
-      </div>
-    </div>
-
   </div>
 
-  <!-- 方法论与状态视图 -->
-  <div class="tab-panel" id="panel-methodology">
-
-    <div class="method-card">
-      <h3>🧭 方法论：纵横分析法 + 四方协同</h3>
-      <div class="method-body">
-        <p><strong>纵横分析法（hv-analysis）</strong>：纵轴穿透三层（资产端 / 产品端 / 治理端），横轴三维对标（同业对标 / 情景压力 / 替代选择）。纵横交汇点 = 估值区间 + 投资价值判断。</p>
-        <p><strong>四方协同</strong>：天保基建（REITs 认购+减值化解）+ 天保能源（运管+港股转型）+ 新兴科技（GPU 租赁）+ 其他综合金融（小贷+租赁+险资+银行+信托）。</p>
-        <p><strong>从「纯市场化不优不劣」到「协同多方共赢」</strong>：基准 IRR 5.00% → 协同综合 7-9%，方向性提升非模型推导。</p>
-      </div>
-    </div>
-
-    <div class="method-card">
-      <h3>📋 6 项签约前准备工作</h3>
-      <div class="method-body">
-        <table class="method-table">
-          <thead><tr><th>#</th><th>事项</th><th>优先级</th><th>核心目标</th></tr></thead>
-          <tbody>
-            <tr><td>1</td><td>并表可行性专项沟通</td><td>🔴 P0</td><td>律所+会所确认架构下并表可行性</td></tr>
-            <tr><td>2</td><td>潜在投资人意向摸底</td><td>🟡 P1</td><td>沟通险资/央企/产业基金报价区间</td></tr>
-            <tr><td>3</td><td>交易所审批进度跟踪</td><td>🔴 P0</td><td>上交所机构间 REITs 反馈问题</td></tr>
-            <tr><td>4</td><td>项目底层信息深度获取</td><td>🔴 P0</td><td>戴德梁行评估报告+信永中和备考报表</td></tr>
-            <tr><td>5</td><td>并购贷款可行性专项沟通</td><td>🔴 P0</td><td>浦发/中行对此类创新产品授信政策</td></tr>
-            <tr><td>6</td><td>汇天+中信建投一揽子意向敲定</td><td>🔴 P0</td><td>天保能源+天保基建参与路径+资金来源</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="method-card">
-      <h3>⚠️ 核心风险提示</h3>
-      <div class="method-body">
-        <ul>
-          <li><strong>上架率 63% → 60% 仅 3pp</strong>：京东/华为续签若不落地，天保 34% 即将承受损失</li>
-          <li><strong>上架率 → 58%</strong>：汇天 20% 倾斜分配耗尽，天保 34% 开始受损</li>
-          <li><strong>上架率 → 55%</strong>：触发 5% IRR 强制赎回，天保回收可能低至投入额 30-50%</li>
-          <li><strong>B300 出口管制</strong>：被禁后国企持有芯片触发次级制裁风险 ★★★★★</li>
-          <li><strong>10 亿基建减值化解</strong>：难度极大，能解决一部分即达标，全部化解可行性不大</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="method-card">
-      <h3>💼 项目状态</h3>
-      <div class="method-body">
-        <p><strong>类型</strong>：非上市储备（np）· 桌面储备项目 · 重大并购候选</p>
-        <p><strong>当前阶段</strong>：纯市场化分析+四方协同方案论证完成，待 6 项准备工作推进</p>
-        <p><strong>建议主体</strong>：天保基建（000965.SZ）作为 34% 认购主体（详见主报告 §2.3）</p>
-        <p><strong>战略价值</strong>：化解天保基建减值 + 天保能源港股估值切换 + 国企信用增信 + 持续扩募通道</p>
-      </div>
-    </div>
-
+  <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; text-align: center;">
+    📅 主报告V2 更新：2026-07-17 · 双视图 dashboard 自动生成（manifest 派生）<br>
+    🔗 <a href="https://jinzhanxiang.github.io/tianbao-projects/" style="color: var(--primary);">天保控股项目中心</a> · 仓库 jinzhanxiang/huitian-network-report
   </div>
-
 </div>
-
-<footer class="report-footer">
-  <p>📅 主报告 V2 更新：2026-07-15 · 双视图 dashboard 部署：2026-07-16 · 仓库 jinzhanxiang/huitian-network-report</p>
-  <p>🔗 <a href="https://jinzhanxiang.github.io/tianbao-projects/">天保控股项目中心</a> · <a href="index.html">汇天简易目录</a></p>
-</footer>
 
 <script>
 document.querySelectorAll('.tab').forEach(tab => {
@@ -271,10 +227,9 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     tab.classList.add('active');
     document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
-    window.scrollTo({top:0, behavior:'smooth'});
+    window.scrollTo({top: 0, behavior: 'smooth'});
   });
 });
 </script>
-
 </body>
 </html>
